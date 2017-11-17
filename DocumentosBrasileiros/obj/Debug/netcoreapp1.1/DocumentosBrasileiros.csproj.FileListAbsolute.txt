@@ -1,0 +1,15 @@
+c:\users\thiago\documents\visual studio 2017\Projects\DocumentosBrasileiros\DocumentosBrasileiros\bin\Debug\netcoreapp1.1\DocumentosBrasileiros.deps.json
+c:\users\thiago\documents\visual studio 2017\Projects\DocumentosBrasileiros\DocumentosBrasileiros\obj\Debug\netcoreapp1.1\DocumentosBrasileiros.csprojResolveAssemblyReference.cache
+c:\users\thiago\documents\visual studio 2017\Projects\DocumentosBrasileiros\DocumentosBrasileiros\obj\Debug\netcoreapp1.1\DocumentosBrasileiros.AssemblyInfo.cs
+c:\users\thiago\documents\visual studio 2017\Projects\DocumentosBrasileiros\DocumentosBrasileiros\bin\Debug\netcoreapp1.1\DocumentosBrasileiros.dll
+c:\users\thiago\documents\visual studio 2017\Projects\DocumentosBrasileiros\DocumentosBrasileiros\bin\Debug\netcoreapp1.1\DocumentosBrasileiros.pdb
+c:\users\thiago\documents\visual studio 2017\Projects\DocumentosBrasileiros\DocumentosBrasileiros\obj\Debug\netcoreapp1.1\DocumentosBrasileiros.dll
+c:\users\thiago\documents\visual studio 2017\Projects\DocumentosBrasileiros\DocumentosBrasileiros\obj\Debug\netcoreapp1.1\DocumentosBrasileiros.pdb
+C:\Users\thiago.prado\Desktop\Mine\DocumentosBrasileiros\DocumentosBrasileiros\DocumentosBrasileiros\bin\Debug\netcoreapp1.1\DocumentosBrasileiros.deps.json
+C:\Users\thiago.prado\Desktop\Mine\DocumentosBrasileiros\DocumentosBrasileiros\DocumentosBrasileiros\bin\Debug\netcoreapp1.1\DocumentosBrasileiros.dll
+C:\Users\thiago.prado\Desktop\Mine\DocumentosBrasileiros\DocumentosBrasileiros\DocumentosBrasileiros\bin\Debug\netcoreapp1.1\DocumentosBrasileiros.pdb
+C:\Users\thiago.prado\Desktop\Mine\DocumentosBrasileiros\DocumentosBrasileiros\DocumentosBrasileiros\obj\Debug\netcoreapp1.1\DocumentosBrasileiros.csprojResolveAssemblyReference.cache
+C:\Users\thiago.prado\Desktop\Mine\DocumentosBrasileiros\DocumentosBrasileiros\DocumentosBrasileiros\obj\Debug\netcoreapp1.1\DocumentosBrasileiros.csproj.CoreCompileInputs.cache
+C:\Users\thiago.prado\Desktop\Mine\DocumentosBrasileiros\DocumentosBrasileiros\DocumentosBrasileiros\obj\Debug\netcoreapp1.1\DocumentosBrasileiros.AssemblyInfo.cs
+C:\Users\thiago.prado\Desktop\Mine\DocumentosBrasileiros\DocumentosBrasileiros\DocumentosBrasileiros\obj\Debug\netcoreapp1.1\DocumentosBrasileiros.dll
+C:\Users\thiago.prado\Desktop\Mine\DocumentosBrasileiros\DocumentosBrasileiros\DocumentosBrasileiros\obj\Debug\netcoreapp1.1\DocumentosBrasileiros.pdb
