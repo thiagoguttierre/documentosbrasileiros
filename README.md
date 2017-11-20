@@ -3,6 +3,9 @@ Validação e criação de números de documentos. Contempla Inscrição Estadua
 
 Desenvolvido em ASP.NET Core
 
+# Instalação
+Install-Package DocumentosBrasileiros
+
 # Validando um documento:
   Documento doc = new Documento("13975859080", TipoDocumento.CNH); //Número gerado automaticamente
   
