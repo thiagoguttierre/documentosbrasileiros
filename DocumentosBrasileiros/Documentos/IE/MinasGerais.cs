@@ -11,9 +11,9 @@ namespace DocumentosBrasileiros.Documentos.IE
     /// <returns></returns>
     public class MinasGerais:IDocumentoEstadual
     {
-        public UF UF => UF.MG;
+        public UfEnum UfEnum => UfEnum.MG;
 
-        public bool IsValid(string inscricaoEstadual)
+        public bool Validar(string inscricaoEstadual)
         {
             if (inscricaoEstadual.Length != 13)
                 return false;
@@ -67,7 +67,7 @@ namespace DocumentosBrasileiros.Documentos.IE
             return digito;
         }
 
-        public string GenerateFake()
+        public string GerarFake()
         {
             string inscricaoSemDigito = "";
 

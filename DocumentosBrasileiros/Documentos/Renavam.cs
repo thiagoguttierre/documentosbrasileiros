@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DocumentosBrasileiros.Documentos
 {
-    public class Renavam : ITipoDocumento
+    public class Renavam : IDocumento
     {
 
         public readonly int[] pesos = { 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
@@ -24,7 +24,7 @@ namespace DocumentosBrasileiros.Documentos
 
             return renavam.EndsWith(ObterDigito(renavam));
         }
-        public string GenerateFake(Documento documento)
+        public string GerarFake(Documento documento)
         {
             throw new NotImplementedException();
         }

@@ -6,10 +6,10 @@ namespace DocumentosBrasileiros.Documentos.IE
 {
     public class MatoGrosso : IDocumentoEstadual
     {
-        public UF UF => UF.MT;
+        public UfEnum UfEnum => UfEnum.MT;
 
         private readonly int[] peso = { 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
-        public bool IsValid(string inscricaoEstadual)
+        public bool Validar(string inscricaoEstadual)
         {
             if (inscricaoEstadual.Length != 11) return false;
 
@@ -19,7 +19,7 @@ namespace DocumentosBrasileiros.Documentos.IE
              inscricaoSemDigito + new DigitoVerificador().ObterDigitoMod11(inscricaoSemDigito, peso).ToString();
         }
 
-        public string GenerateFake()
+        public string GerarFake()
         {
             string inscricaoSemDigito = "";
             Random rnd = new Random();

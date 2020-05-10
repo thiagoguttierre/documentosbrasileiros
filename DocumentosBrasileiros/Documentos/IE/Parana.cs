@@ -6,10 +6,10 @@ namespace DocumentosBrasileiros.Documentos.IE
 {
     public class Parana : IDocumentoEstadual
     {
-        public UF UF => UF.PR;
+        public UfEnum UfEnum => UfEnum.PR;
 
         private readonly int[] peso = { 4, 3, 2, 7, 6, 5, 4, 3, 2 };
-        public bool IsValid(string inscricaoEstadual)
+        public bool Validar(string inscricaoEstadual)
         {
             if (inscricaoEstadual.Length != 10) return false;
 
@@ -20,7 +20,7 @@ namespace DocumentosBrasileiros.Documentos.IE
             return inscricaoEstadual == inscricaoSemDigito + digito1 + digito2;
         }
 
-        public string GenerateFake()
+        public string GerarFake()
         {
             string inscricaoSemDigito = "";
             Random rnd = new Random();

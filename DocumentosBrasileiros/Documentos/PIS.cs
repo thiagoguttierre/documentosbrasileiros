@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DocumentosBrasileiros.Documentos
 {
-    public class PIS : ITipoDocumento
+    public class Pis : IDocumento
     {
         private readonly int[] pesos = { 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
 
@@ -21,7 +21,7 @@ namespace DocumentosBrasileiros.Documentos
             return pis.EndsWith(ObterDigitos(pis));
         }
 
-        public string GenerateFake(Documento documento)
+        public string GerarFake(Documento documento)
         {
             string pis = "".RandomNumbers(9);
 

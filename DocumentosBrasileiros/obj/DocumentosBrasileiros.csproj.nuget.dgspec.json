@@ -1,0 +1,54 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Projects\\thiagoguttierre\\documentosbrasileiros\\DocumentosBrasileiros\\DocumentosBrasileiros.csproj": {}
+  },
+  "projects": {
+    "C:\\Projects\\thiagoguttierre\\documentosbrasileiros\\DocumentosBrasileiros\\DocumentosBrasileiros.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\thiagoguttierre\\documentosbrasileiros\\DocumentosBrasileiros\\DocumentosBrasileiros.csproj",
+        "projectName": "DocumentosBrasileiros",
+        "projectPath": "C:\\Projects\\thiagoguttierre\\documentosbrasileiros\\DocumentosBrasileiros\\DocumentosBrasileiros.csproj",
+        "packagesPath": "C:\\Users\\thiag\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\thiagoguttierre\\documentosbrasileiros\\DocumentosBrasileiros\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\thiag\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp1.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\thiag\\AppData\\Roaming\\SAK\\Nuget": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://xpinvestimentos.pkgs.visualstudio.com/_packaging/PackagesXP/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp1.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp1.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[1.1.2, )",
+              "autoReferenced": true
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

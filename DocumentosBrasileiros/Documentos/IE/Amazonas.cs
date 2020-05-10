@@ -5,10 +5,10 @@ namespace DocumentosBrasileiros.Documentos.IE
 {
     public class Amazonas : IDocumentoEstadual
     {
-        public UF UF => UF.AM;
+        public UfEnum UfEnum => UfEnum.AM;
 
         private readonly int[] peso = { 9, 8, 7, 6, 5, 4, 3, 2 };
-        public bool IsValid(string inscricaoEstadual)
+        public bool Validar(string inscricaoEstadual)
         {
             if (inscricaoEstadual.Length != 9) return false;
 
@@ -36,7 +36,7 @@ namespace DocumentosBrasileiros.Documentos.IE
             return digito;
         }
 
-        public string GenerateFake()
+        public string GerarFake()
         {
             string inscricaoSemDigito = "";
             Random rnd = new Random();

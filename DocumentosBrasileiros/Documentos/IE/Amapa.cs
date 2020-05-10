@@ -13,10 +13,10 @@ namespace DocumentosBrasileiros.Documentos.IE
     /// 
     public class Amapa : IDocumentoEstadual
     {
-        public UF UF => UF.AP;
+        public UfEnum UfEnum => UfEnum.AP;
         private readonly int[] peso = { 9, 8, 7, 6, 5, 4, 3, 2 };
 
-        public bool IsValid(string inscricaoEstadual)
+        public bool Validar(string inscricaoEstadual)
         {
             if (inscricaoEstadual.Length != 9) return false;
             if (!inscricaoEstadual.StartsWith("03")) return false;
@@ -56,7 +56,7 @@ namespace DocumentosBrasileiros.Documentos.IE
             return digito;
         }
 
-        public string GenerateFake()
+        public string GerarFake()
         {
             string inscricaoSemDigito = "03";
             Random rnd = new Random();

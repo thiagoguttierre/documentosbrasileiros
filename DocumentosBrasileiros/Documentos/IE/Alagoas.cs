@@ -14,38 +14,38 @@ namespace DocumentosBrasileiros.Documentos.IE
     /// </summary>
     public class Alagoas: IDocumentoEstadual
     {
-        public UF UF => UF.AL;
+        public UfEnum UfEnum => UfEnum.AL;
 
 
-        private readonly int[] tiposEmpresa = { 0, 3, 5, 7, 8, 4, 2, 1 };
-        private readonly int[] pesos = { 9, 8, 7, 6, 5, 4, 3, 2 };
+        private readonly int[] _tiposEmpresa = { 0, 3, 5, 7, 8, 4, 2, 1 };
+        private readonly int[] _pesos = { 9, 8, 7, 6, 5, 4, 3, 2 };
 
-        public bool IsValid(string inscricaoEstadual)
+        public bool Validar(string inscricaoEstadual)
         {
             if (inscricaoEstadual.Length != 9) return false;
 
             if (!inscricaoEstadual.StartsWith("24")) return false;
 
-            if (!tiposEmpresa.Contains(int.Parse(inscricaoEstadual.Substring(2, 1)))) return false;
+            if (!_tiposEmpresa.Contains(int.Parse(inscricaoEstadual.Substring(2, 1)))) return false;
 
 
             string inscricaoSemDigito = inscricaoEstadual.Substring(0, 8);
 
-            return inscricaoSemDigito + new DigitoVerificador().ObterDigitoMod11(inscricaoSemDigito, pesos).ToString() == inscricaoEstadual;
+            return inscricaoSemDigito + new DigitoVerificador().ObterDigitoMod11(inscricaoSemDigito, _pesos).ToString() == inscricaoEstadual;
         }
 
-        public string GenerateFake()
+        public string GerarFake()
         {
             string inscricaoSemDigito = "24";
 
             Random rnd = new Random();
-            double _random = rnd.NextDouble();
+            double random = rnd.NextDouble();
             int _x = 0;
-            if (_random < 0.2) { _x = tiposEmpresa[0]; }
-            else if (_random >= 0.2 && _random < 0.4) { _x = tiposEmpresa[1]; }
-            else if (_random >= 0.4 && _random < 0.6) { _x = tiposEmpresa[2]; }
-            else if (_random >= 0.6 && _random < 0.8) { _x = tiposEmpresa[3]; }
-            else { _x = tiposEmpresa[4]; }
+            if (random < 0.2) { _x = _tiposEmpresa[0]; }
+            else if (random >= 0.2 && random < 0.4) { _x = _tiposEmpresa[1]; }
+            else if (random >= 0.4 && random < 0.6) { _x = _tiposEmpresa[2]; }
+            else if (random >= 0.6 && random < 0.8) { _x = _tiposEmpresa[3]; }
+            else { _x = _tiposEmpresa[4]; }
 
             inscricaoSemDigito += _x.ToString();
             for (int i = 0; i < 5; i++)
@@ -53,7 +53,7 @@ namespace DocumentosBrasileiros.Documentos.IE
                 inscricaoSemDigito += rnd.Next(0, 9).ToString();
             }
 
-            return inscricaoSemDigito + new DigitoVerificador().ObterDigitoMod11(inscricaoSemDigito, pesos).ToString();
+            return inscricaoSemDigito + new DigitoVerificador().ObterDigitoMod11(inscricaoSemDigito, _pesos).ToString();
 
         }
     }

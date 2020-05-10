@@ -12,9 +12,9 @@ namespace DocumentosBrasileiros.Documentos.IE
     
     public class Goias : IDocumentoEstadual
     {
-        public UF UF => UF.GO;
+        public UfEnum UfEnum => UfEnum.GO;
       
-        public bool IsValid(string inscricaoEstadual)
+        public bool Validar(string inscricaoEstadual)
         {
             if (inscricaoEstadual.Length != 9) return false;
 
@@ -64,7 +64,7 @@ namespace DocumentosBrasileiros.Documentos.IE
             return new int[1] { dv };
         }
 
-        public string GenerateFake()
+        public string GerarFake()
         {
             string inscricaoSemDigito = "";
 

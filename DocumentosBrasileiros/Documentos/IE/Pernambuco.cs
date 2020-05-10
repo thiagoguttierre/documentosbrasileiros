@@ -7,10 +7,10 @@ namespace DocumentosBrasileiros.Documentos.IE
 {
     public class Pernambuco : IDocumentoEstadual
     {
-        public UF UF => UF.PE;
+        public UfEnum UfEnum => UfEnum.PE;
 
         private readonly int[] peso = { 5, 4, 3, 2, 1, 9, 8, 7, 6, 5, 4, 3, 2 };
-        public bool IsValid(string inscricaoEstadual)
+        public bool Validar(string inscricaoEstadual)
         {
             if (inscricaoEstadual.Length != 9 && inscricaoEstadual.Length != 14) return false;
 
@@ -30,7 +30,7 @@ namespace DocumentosBrasileiros.Documentos.IE
 
             return inscricaoSemDigito + d1 + d2;
         }
-        public string GenerateFake()
+        public string GerarFake()
         {
             string inscricaoSemDigito = "";
 

@@ -5,11 +5,11 @@ namespace DocumentosBrasileiros.Documentos.IE
 {
     public class SaoPaulo : IDocumentoEstadual
     {
-        public UF UF => UF.SP;
+        public UfEnum UfEnum => UfEnum.SP;
 
         private readonly int[] pesos1 = { 1, 3, 4, 5, 6, 7, 8, 0 };
         private readonly int[] pesos2 = { 3, 2, 0, 9, 8, 7, 6, 5, 4, 3, 2 };
-        public bool IsValid(string valor)
+        public bool Validar(string valor)
         {
             if (valor.Length != 12 && valor.Length != 13)
                 return false;
@@ -48,7 +48,7 @@ namespace DocumentosBrasileiros.Documentos.IE
             return Convert.ToInt32(str.Substring(str.Length - 1, 1));
         }
 
-        public string GenerateFake()
+        public string GerarFake()
         {
             string inscricaoSemDigito = "";
             Random random = new Random();

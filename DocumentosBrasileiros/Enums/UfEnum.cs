@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DocumentosBrasileiros.Enums
+﻿namespace DocumentosBrasileiros.Enums
 {
-    public enum  UF
+    public enum  UfEnum
     {
         RO = 11,
         AC = 12,

@@ -6,10 +6,10 @@ namespace DocumentosBrasileiros.Documentos.IE
 {
     public class DistritoFederal : IDocumentoEstadual
     {
-        public UF UF => UF.DF;
+        public UfEnum UfEnum => UfEnum.DF;
 
         private readonly int[] peso = { 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
-        public bool IsValid(string inscricaoEstadual)
+        public bool Validar(string inscricaoEstadual)
         {
             if (inscricaoEstadual.Length != 13) return false;
             if (!inscricaoEstadual.StartsWith("07")) return false;
@@ -33,7 +33,7 @@ namespace DocumentosBrasileiros.Documentos.IE
             return digito;
         }
 
-        public string GenerateFake()
+        public string GerarFake()
         {
             string inscricaoSemDigito = "07";
             Random rnd = new Random();

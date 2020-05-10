@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DocumentosBrasileiros.Helpers
+﻿namespace DocumentosBrasileiros.Helpers
 {
     public class DigitoVerificador
     {

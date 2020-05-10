@@ -1,11 +1,8 @@
 ﻿using DocumentosBrasileiros.Helpers;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace DocumentosBrasileiros.Documentos
 {
-    public class CNH : ITipoDocumento
+    public class Cnh : IDocumento
     {
         private readonly int[] peso1 = { 9, 8, 7, 6, 5, 4, 3, 2, 1 };
         private readonly int[] peso2 = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -21,7 +18,7 @@ namespace DocumentosBrasileiros.Documentos
             return documento.Numero.EndsWith(digitos);
         }
 
-        public string GenerateFake(Documento documento)
+        public string GerarFake(Documento documento)
         {
             string cnh = "".RandomNumbers(8);
 

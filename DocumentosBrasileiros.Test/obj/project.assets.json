@@ -3074,10 +3074,12 @@
       ]
     },
     "Microsoft.NETCore.App/1.1.2": {
-      "sha512": "TUPK1xhef7WcbsIkhfZOz6J7DrG5aebjVRBswPfHe90eDhfnlWHaLiI1OtMB2O78bf5d37WO6ge+9nel2keKkA==",
+      "sha512": "fcN0Ob6rjY7Zu0770cA5l9wRJvj7+ltJPPdryUidejkkhao+y2AYrtezBTlP9nCSFXLmYR9BtaknORT17x8reA==",
       "type": "package",
       "path": "microsoft.netcore.app/1.1.2",
       "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netcoreapp1.0/_._",
@@ -3098,10 +3100,12 @@
       ]
     },
     "Microsoft.NETCore.DotNetHostPolicy/1.1.2": {
-      "sha512": "fD2UWfXXY+FgPWVqvpNo2/d7b/LHYl1/aepVimYYkVsuF4CczP8hgCJIlKiUbWF/d98xCMtz7bbuv6LkGfdfeQ==",
+      "sha512": "nes7MaBG1zWz44m+zR4SDiOVmpCFiY49BcJGRaIO0TqjsLZmuUQVXEGcNZFlme95dlaki9QYJr4FK5NKNlPA6Q==",
       "type": "package",
       "path": "microsoft.netcore.dotnethostpolicy/1.1.2",
       "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "microsoft.netcore.dotnethostpolicy.1.1.2.nupkg.sha512",
@@ -8550,22 +8554,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\thiago.prado\\.nuget\\packages\\": {}
+    "C:\\Users\\thiag\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "C:\\Users\\thiago.prado\\Desktop\\Mine\\DocumentosBrasileiros\\DocumentosBrasileiros\\DocumentosBrasileiros.Test\\DocumentosBrasileiros.Test.csproj",
+      "projectUniqueName": "C:\\Projects\\thiagoguttierre\\documentosbrasileiros\\DocumentosBrasileiros.Test\\DocumentosBrasileiros.Test.csproj",
       "projectName": "DocumentosBrasileiros.Test",
-      "projectPath": "C:\\Users\\thiago.prado\\Desktop\\Mine\\DocumentosBrasileiros\\DocumentosBrasileiros\\DocumentosBrasileiros.Test\\DocumentosBrasileiros.Test.csproj",
-      "packagesPath": "C:\\Users\\thiago.prado\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\thiago.prado\\Desktop\\Mine\\DocumentosBrasileiros\\DocumentosBrasileiros\\DocumentosBrasileiros.Test\\obj\\",
+      "projectPath": "C:\\Projects\\thiagoguttierre\\documentosbrasileiros\\DocumentosBrasileiros.Test\\DocumentosBrasileiros.Test.csproj",
+      "packagesPath": "C:\\Users\\thiag\\.nuget\\packages\\",
+      "outputPath": "C:\\Projects\\thiagoguttierre\\documentosbrasileiros\\DocumentosBrasileiros.Test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\thiago.prado\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\thiag\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8573,39 +8574,47 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "C:\\Users\\thiag\\AppData\\Roaming\\SAK\\Nuget": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://xpinvestimentos.pkgs.visualstudio.com/_packaging/PackagesXP/nuget/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp1.1": {
           "projectReferences": {
-            "C:\\Users\\thiago.prado\\Desktop\\Mine\\DocumentosBrasileiros\\DocumentosBrasileiros\\DocumentosBrasileiros\\DocumentosBrasileiros.csproj": {
-              "projectPath": "C:\\Users\\thiago.prado\\Desktop\\Mine\\DocumentosBrasileiros\\DocumentosBrasileiros\\DocumentosBrasileiros\\DocumentosBrasileiros.csproj"
+            "C:\\Projects\\thiagoguttierre\\documentosbrasileiros\\DocumentosBrasileiros\\DocumentosBrasileiros.csproj": {
+              "projectPath": "C:\\Projects\\thiagoguttierre\\documentosbrasileiros\\DocumentosBrasileiros\\DocumentosBrasileiros.csproj"
             }
           }
         }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
       }
     },
     "frameworks": {
       "netcoreapp1.1": {
         "dependencies": {
-          "MSTest.TestFramework": {
-            "target": "Package",
-            "version": "1.1.17"
-          },
           "MSTest.TestAdapter": {
             "target": "Package",
-            "version": "1.1.17"
+            "version": "[1.1.17, )"
           },
-          "Microsoft.NETCore.App": {
+          "MSTest.TestFramework": {
             "target": "Package",
-            "version": "1.1.2",
-            "autoReferenced": true
+            "version": "[1.1.17, )"
           },
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
-            "version": "15.3.0-preview-20170425-07"
+            "version": "[15.3.0-preview-20170425-07, )"
+          },
+          "Microsoft.NETCore.App": {
+            "target": "Package",
+            "version": "[1.1.2, )",
+            "autoReferenced": true
           }
-        }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

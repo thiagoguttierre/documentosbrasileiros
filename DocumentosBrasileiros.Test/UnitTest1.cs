@@ -7,24 +7,24 @@ namespace DocumentosBrasileiros.Test
     public class UnitTest1
     {
         [TestMethod]
-        public void ValidacaoCNH()
+        public void ValidacaoCnh()
         {
-           var doc = new Documento("13975859080", TipoDocumento.CNH);
+           var doc = new Documento("13975859080", TipoDocumento.Cnh);
             Assert.IsTrue(doc.DocumentoValido());
         }
 
         [TestMethod]
-        public void GerarCNHValido()
+        public void GerarCnhValido()
         {
-            var doc = new Documento(TipoDocumento.CNH);
+            var doc = new Documento(TipoDocumento.Cnh);
             doc.GerarDocumento();
             Assert.IsTrue(doc.DocumentoValido());
         }
 
         [TestMethod]
-        public void ValidacaoIE_SP()
+        public void ValidacaoIe_Sp()
         {
-            var doc = new Documento("857.604.844.470", TipoDocumento.InscricaoEstadual, Enums.UF.SP);
+            var doc = new Documento("857.604.844.470", TipoDocumento.InscricaoEstadual, Enums.UfEnum.SP);
             Assert.IsTrue(doc.DocumentoValido());
         }
 
@@ -32,7 +32,7 @@ namespace DocumentosBrasileiros.Test
         [TestMethod]
         public void GerarIeSpValido()
         {
-            var doc = new Documento(TipoDocumento.InscricaoEstadual, Enums.UF.SP);
+            var doc = new Documento(TipoDocumento.InscricaoEstadual, Enums.UfEnum.SP);
             doc.GerarDocumento();
             Assert.IsTrue(doc.DocumentoValido());
         }

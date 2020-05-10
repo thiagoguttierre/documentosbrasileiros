@@ -8,7 +8,7 @@ using System.Text;
 
 namespace DocumentosBrasileiros.Documentos
 {
-    public class InscricaoEstadual : ITipoDocumento
+    public class InscricaoEstadual : IDocumento
     {
         public bool Validar(Documento documento)
         {
@@ -23,14 +23,14 @@ namespace DocumentosBrasileiros.Documentos
 
             IDocumentoEstadual validacaoIE = GetEstado(documento);
 
-            return validacaoIE.IsValid(documento.Numero);
+            return validacaoIE.Validar(documento.Numero);
         }
 
-        public string GenerateFake(Documento documento)
+        public string GerarFake(Documento documento)
         {
             IDocumentoEstadual validacaoIE = GetEstado(documento);
 
-            return validacaoIE.GenerateFake();
+            return validacaoIE.GerarFake();
         }
 
         private IDocumentoEstadual GetEstado(Documento documento)
@@ -75,7 +75,7 @@ namespace DocumentosBrasileiros.Documentos
                 new Tocantins()
             };
 
-            return ieEstados.FirstOrDefault(x => x.UF == documento.UF);
+            return ieEstados.FirstOrDefault(x => x.UfEnum == documento.UF);
         }
     }
 }

@@ -6,17 +6,17 @@ namespace DocumentosBrasileiros.Documentos.IE
 {
     public class RioGrandeDoSul : IDocumentoEstadual
     {
-        public UF UF => UF.RS;
+        public UfEnum UfEnum => UfEnum.RS;
 
         private readonly int[] peso = { 2, 9, 8, 7, 6, 5, 4, 3, 2 };
-        public bool IsValid(string inscricaoEstadual)
+        public bool Validar(string inscricaoEstadual)
         {
             if (inscricaoEstadual.Length != 10) return false;
             string inscricaoSemDigito = inscricaoEstadual.Substring(0, 9);
             return inscricaoEstadual ==
                 inscricaoSemDigito + new DigitoVerificador().ObterDigitoMod11(inscricaoSemDigito, peso).ToString();
         }
-        public string GenerateFake()
+        public string GerarFake()
         {
             string inscricaoSemDigito = "";
             Random rnd = new Random();

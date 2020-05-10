@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DocumentosBrasileiros.Documentos
 {
-    public class CPF : ITipoDocumento
+    public class Cpf : IDocumento
     {
         public readonly int[] pesos = { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };
         public bool Validar(Documento documento)
@@ -19,7 +19,7 @@ namespace DocumentosBrasileiros.Documentos
 
             return cpf.EndsWith(ObterDigitos(cpf));
         }
-        public string GenerateFake(Documento documento)
+        public string GerarFake(Documento documento)
         {
             string cpf = "".RandomNumbers(8);
 

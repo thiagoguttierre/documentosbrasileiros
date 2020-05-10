@@ -6,10 +6,10 @@ namespace DocumentosBrasileiros.Documentos.IE
 {
     public class Roraima : IDocumentoEstadual
     {
-        public UF UF => UF.SC;
+        public UfEnum UfEnum => UfEnum.SC;
 
         public readonly int[] peso = { 1, 2, 3, 4, 5, 6, 7, 8 };
-        public bool IsValid(string inscricaoEstadual)
+        public bool Validar(string inscricaoEstadual)
         {
             if (inscricaoEstadual.Length != 9 || !inscricaoEstadual.StartsWith("24")) return false;
 
@@ -19,7 +19,7 @@ namespace DocumentosBrasileiros.Documentos.IE
             inscricaoSemDigito + new DigitoVerificador().ObterDigitoMod9(inscricaoSemDigito, peso).ToString();
         }
 
-        public string GenerateFake()
+        public string GerarFake()
         {
             string inscricaoSemDigito = "24";
             Random rnd = new Random();

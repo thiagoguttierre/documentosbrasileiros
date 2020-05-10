@@ -7,16 +7,16 @@ namespace DocumentosBrasileiros
     public class Documento
     {
         public string Numero { get; set; }
-        public UF? UF { get; set; }
-        public ITipoDocumento TipoDocumento { get; set; }
+        public UfEnum? UF { get; set; }
+        public IDocumento TipoDocumento { get; set; }
 
-        public Documento(string numero, TipoDocumento tipoDocumento, UF? uf = null)
+        public Documento(string numero, TipoDocumento tipoDocumento, UfEnum? uf = null)
         {
             this.Numero = numero.RemoveSpecialChars();
             this.TipoDocumento = tipoDocumento.Documento;
             this.UF = uf;
         }
-        public Documento(TipoDocumento tipoDocumento, UF? uf = null)
+        public Documento(TipoDocumento tipoDocumento, UfEnum? uf = null)
         {
             this.TipoDocumento = tipoDocumento.Documento;
             this.UF = uf;
@@ -49,7 +49,7 @@ namespace DocumentosBrasileiros
                 throw new Exception("É obrigatório informar uma UF para o tipo de documento selecionado");
             }
 
-            this.Numero = TipoDocumento.GenerateFake(this);
+            this.Numero = TipoDocumento.GerarFake(this);
         }
 
     }

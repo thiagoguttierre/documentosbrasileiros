@@ -13,3 +13,11 @@ C:\Users\thiago.prado\Desktop\Mine\DocumentosBrasileiros\DocumentosBrasileiros\D
 C:\Users\thiago.prado\Desktop\Mine\DocumentosBrasileiros\DocumentosBrasileiros\DocumentosBrasileiros\obj\Debug\netcoreapp1.1\DocumentosBrasileiros.AssemblyInfo.cs
 C:\Users\thiago.prado\Desktop\Mine\DocumentosBrasileiros\DocumentosBrasileiros\DocumentosBrasileiros\obj\Debug\netcoreapp1.1\DocumentosBrasileiros.dll
 C:\Users\thiago.prado\Desktop\Mine\DocumentosBrasileiros\DocumentosBrasileiros\DocumentosBrasileiros\obj\Debug\netcoreapp1.1\DocumentosBrasileiros.pdb
+C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros\bin\Debug\netcoreapp1.1\DocumentosBrasileiros.deps.json
+C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros\bin\Debug\netcoreapp1.1\DocumentosBrasileiros.dll
+C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros\bin\Debug\netcoreapp1.1\DocumentosBrasileiros.pdb
+C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros\obj\Debug\netcoreapp1.1\DocumentosBrasileiros.csprojAssemblyReference.cache
+C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros\obj\Debug\netcoreapp1.1\DocumentosBrasileiros.AssemblyInfoInputs.cache
+C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros\obj\Debug\netcoreapp1.1\DocumentosBrasileiros.AssemblyInfo.cs
+C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros\obj\Debug\netcoreapp1.1\DocumentosBrasileiros.dll
+C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros\obj\Debug\netcoreapp1.1\DocumentosBrasileiros.pdb

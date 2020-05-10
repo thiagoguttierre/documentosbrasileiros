@@ -7,10 +7,10 @@ namespace DocumentosBrasileiros.Documentos.IE
 {
     public class SantaCatarina : IDocumentoEstadual
     {
-        public UF UF => UF.SC;
+        public UfEnum UfEnum => UfEnum.SC;
 
         private readonly int[] peso = new int[8] { 9, 8, 7, 6, 5, 4, 3, 2 };
-        public bool IsValid(string ie)
+        public bool Validar(string ie)
         {
             if (ie.Length != 9) return false; //faltando caracteres?
             if (ie.Distinct().Count() == 1) return false; //todos os digitos iguais?
@@ -22,7 +22,7 @@ namespace DocumentosBrasileiros.Documentos.IE
         }
 
 
-        public string GenerateFake()
+        public string GerarFake()
         {
             string inscricaoSemDigito = "";
 

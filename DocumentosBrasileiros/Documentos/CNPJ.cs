@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DocumentosBrasileiros.Documentos
 {
-    public class CNPJ : ITipoDocumento
+    public class Cnpj : IDocumento
     {
         private readonly int[] pesos = { 6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
 
@@ -20,7 +20,7 @@ namespace DocumentosBrasileiros.Documentos
 
             return cnpj.EndsWith(ObterDigitos(cnpj));
         }
-        public string GenerateFake(Documento documento)
+        public string GerarFake(Documento documento)
         {
             string cnpj = "".RandomNumbers(11);
 
