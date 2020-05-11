@@ -18,7 +18,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp1.1"
+          "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -27,7 +27,7 @@
           "https://xpinvestimentos.pkgs.visualstudio.com/_packaging/PackagesXP/nuget/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp1.1": {
+          "netcoreapp3.1": {
             "projectReferences": {
               "C:\\Projects\\thiagoguttierre\\documentosbrasileiros\\DocumentosBrasileiros\\DocumentosBrasileiros.csproj": {
                 "projectPath": "C:\\Projects\\thiagoguttierre\\documentosbrasileiros\\DocumentosBrasileiros\\DocumentosBrasileiros.csproj"
@@ -42,7 +42,7 @@
         }
       },
       "frameworks": {
-        "netcoreapp1.1": {
+        "netcoreapp3.1": {
           "dependencies": {
             "MSTest.TestAdapter": {
               "target": "Package",
@@ -55,11 +55,21 @@
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[15.3.0-preview-20170425-07, )"
-            },
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
-              "target": "Package",
-              "version": "[1.1.2, )",
-              "autoReferenced": true
+              "privateAssets": "all"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"

@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v1.1": {
+    ".NETCoreApp,Version=v3.1": {
       "Libuv/1.9.1": {
         "type": "package",
         "dependencies": {
@@ -149,7 +149,7 @@
       "Microsoft.DiaSymReader.Native/1.4.1": {
         "type": "package",
         "build": {
-          "build/Microsoft.DiaSymReader.Native.props": {}
+          "build/_._": {}
         },
         "runtimeTargets": {
           "runtimes/win-x64/native/Microsoft.DiaSymReader.Native.amd64.dll": {
@@ -8545,12 +8545,11 @@
     }
   },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v1.1": [
+    ".NETCoreApp,Version=v3.1": [
       "DocumentosBrasileiros >= 1.0.0",
       "MSTest.TestAdapter >= 1.1.17",
       "MSTest.TestFramework >= 1.1.17",
-      "Microsoft.NET.Test.Sdk >= 15.3.0-preview-20170425-07",
-      "Microsoft.NETCore.App >= 1.1.2"
+      "Microsoft.NET.Test.Sdk >= 15.3.0-preview-20170425-07"
     ]
   },
   "packageFolders": {
@@ -8570,7 +8569,7 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "netcoreapp1.1"
+        "netcoreapp3.1"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -8579,7 +8578,7 @@
         "https://xpinvestimentos.pkgs.visualstudio.com/_packaging/PackagesXP/nuget/v3/index.json": {}
       },
       "frameworks": {
-        "netcoreapp1.1": {
+        "netcoreapp3.1": {
           "projectReferences": {
             "C:\\Projects\\thiagoguttierre\\documentosbrasileiros\\DocumentosBrasileiros\\DocumentosBrasileiros.csproj": {
               "projectPath": "C:\\Projects\\thiagoguttierre\\documentosbrasileiros\\DocumentosBrasileiros\\DocumentosBrasileiros.csproj"
@@ -8594,7 +8593,7 @@
       }
     },
     "frameworks": {
-      "netcoreapp1.1": {
+      "netcoreapp3.1": {
         "dependencies": {
           "MSTest.TestAdapter": {
             "target": "Package",
@@ -8607,11 +8606,21 @@
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
             "version": "[15.3.0-preview-20170425-07, )"
-          },
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
           "Microsoft.NETCore.App": {
-            "target": "Package",
-            "version": "[1.1.2, )",
-            "autoReferenced": true
+            "privateAssets": "all"
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
