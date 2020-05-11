@@ -2,6 +2,7 @@
 using DocumentosBrasileiros.Helpers;
 using System;
 using System.Collections.Generic;
+using DocumentosBrasileiros.Interfaces;
 
 namespace DocumentosBrasileiros.Documentos.IE
 {
@@ -11,7 +12,7 @@ namespace DocumentosBrasileiros.Documentos.IE
     /// N(*2)T(*2)(N*6)(D)
     /// Valores possíveis de T:01 - Produtor Rural. 02 - Industria e Comércio. 03 - Empresas Rudimentares. 99 = Empresas do Cadastro Antigo (SUSPENSAS)
     /// </summary>
-    public class Tocantins : IDocumentoEstadual
+    public class Tocantins : IInscricaoEstadual
     {
         public UfEnum UfEnum => UfEnum.TO;
 

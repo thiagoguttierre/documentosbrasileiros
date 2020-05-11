@@ -1,10 +1,11 @@
 ﻿
 using DocumentosBrasileiros.Enums;
 using System;
+using DocumentosBrasileiros.Interfaces;
 
 namespace DocumentosBrasileiros.Documentos.IE
 {
-    public class DistritoFederal : IDocumentoEstadual
+    public class DistritoFederal : IInscricaoEstadual
     {
         public UfEnum UfEnum => UfEnum.DF;
 

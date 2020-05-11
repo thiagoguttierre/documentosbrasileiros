@@ -10,15 +10,15 @@ namespace DocumentosBrasileiros.Helpers
     {
         public static string RemoveSpecialChars(this string value)
         {
-            if (string.IsNullOrEmpty(value))
-                return string.Empty;
-            return new Regex("[;\\\\/:*?\"<>|=&--'.¨$#%-+,!@()_]").Replace(value, "").Replace(" ", "");
+            return string.IsNullOrEmpty(value) 
+                ? string.Empty 
+                : new Regex("[;\\\\/:*?\"<>|=&--'.¨$#%-+,!@()_]").Replace(value, "").Replace(" ", "");
         }
 
         public static string RandomNumbers(this string value, int length)
         {
             Random rnd = new Random();
-            for (int i = 0; i <= length; i++)
+            for (int i = 0; i < length; i++)
             {
                 value += rnd.Next(0, 9);
             }

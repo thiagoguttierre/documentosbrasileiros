@@ -2,6 +2,7 @@
 using DocumentosBrasileiros.Helpers;
 using System;
 using System.Linq;
+using DocumentosBrasileiros.Interfaces;
 
 namespace DocumentosBrasileiros.Documentos.IE
 {
@@ -12,7 +13,7 @@ namespace DocumentosBrasileiros.Documentos.IE
     /// NNNNN - Número da empresa
     /// D - Dígito verificador
     /// </summary>
-    public class Alagoas: IDocumentoEstadual
+    public class Alagoas: IInscricaoEstadual
     {
         public UfEnum UfEnum => UfEnum.AL;
 

@@ -1,10 +1,11 @@
 ﻿using DocumentosBrasileiros.Enums;
 using DocumentosBrasileiros.Helpers;
 using System;
+using DocumentosBrasileiros.Interfaces;
 
 namespace DocumentosBrasileiros.Documentos.IE
 {
-    public class MatoGrossoDoSul : IDocumentoEstadual
+    public class MatoGrossoDoSul : IInscricaoEstadual
     {
         public UfEnum UfEnum => UfEnum.MS;
 

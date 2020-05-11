@@ -1,10 +1,11 @@
 ﻿using DocumentosBrasileiros.Enums;
 using DocumentosBrasileiros.Helpers;
 using System;
+using DocumentosBrasileiros.Interfaces;
 
 namespace DocumentosBrasileiros.Documentos.IE
 {
-    public class Sergipe : IDocumentoEstadual
+    public class Sergipe : IInscricaoEstadual
     {
         public UfEnum UfEnum => UfEnum.SE;
 

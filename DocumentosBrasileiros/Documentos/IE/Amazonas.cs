@@ -1,9 +1,10 @@
 ﻿using DocumentosBrasileiros.Enums;
 using System;
+using DocumentosBrasileiros.Interfaces;
 
 namespace DocumentosBrasileiros.Documentos.IE
 {
-    public class Amazonas : IDocumentoEstadual
+    public class Amazonas : IInscricaoEstadual
     {
         public UfEnum UfEnum => UfEnum.AM;
 

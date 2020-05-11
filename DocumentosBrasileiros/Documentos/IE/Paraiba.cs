@@ -1,10 +1,11 @@
 ﻿using DocumentosBrasileiros.Enums;
 using DocumentosBrasileiros.Helpers;
 using System;
+using DocumentosBrasileiros.Interfaces;
 
 namespace DocumentosBrasileiros.Documentos.IE
 {
-    public class Paraiba : IDocumentoEstadual
+    public class Paraiba : IInscricaoEstadual
     {
         public UfEnum UfEnum => UfEnum.PB;
 

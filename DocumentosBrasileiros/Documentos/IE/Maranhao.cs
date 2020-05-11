@@ -1,10 +1,11 @@
 ﻿using DocumentosBrasileiros.Enums;
 using DocumentosBrasileiros.Helpers;
 using System;
+using DocumentosBrasileiros.Interfaces;
 
 namespace DocumentosBrasileiros.Documentos.IE
 {
-    public class Maranhao : IDocumentoEstadual
+    public class Maranhao : IInscricaoEstadual
     {
         public UfEnum UfEnum => UfEnum.MA;
 

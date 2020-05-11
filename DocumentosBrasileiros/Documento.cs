@@ -1,56 +1,29 @@
-﻿using DocumentosBrasileiros.Enums;
-using DocumentosBrasileiros.Helpers;
+﻿using DocumentosBrasileiros.Helpers;
 using System;
 
 namespace DocumentosBrasileiros
 {
-    public class Documento
+    public abstract class Documento
     {
-        public string Numero { get; set; }
-        public UfEnum? UF { get; set; }
-        public IDocumento TipoDocumento { get; set; }
+        private string _numero;
+        public string Numero
+        {
+            get => _numero;
+            set => _numero = value.RemoveSpecialChars();
+        }
 
-        public Documento(string numero, TipoDocumento tipoDocumento, UfEnum? uf = null)
-        {
-            this.Numero = numero.RemoveSpecialChars();
-            this.TipoDocumento = tipoDocumento.Documento;
-            this.UF = uf;
-        }
-        public Documento(TipoDocumento tipoDocumento, UfEnum? uf = null)
-        {
-            this.TipoDocumento = tipoDocumento.Documento;
-            this.UF = uf;
-        }
+        protected abstract bool Validar();
 
         public bool DocumentoValido()
         {
-            if (TipoDocumento == null)
-            {
-                throw new Exception("Informe um tipo de documento");
-            }
             if (string.IsNullOrEmpty(Numero))
             {
                 throw new Exception("Informe o número do documento");
             }
 
-
-
-            return TipoDocumento.Validar(this);
+            return Validar();
         }
 
-        public void GerarDocumento()
-        {
-            if (TipoDocumento == null)
-            {
-                throw new Exception("Informe um tipo de documento");
-            }
-            if (TipoDocumento is IDocumentoEstadual && UF == null)
-            {
-                throw new Exception("É obrigatório informar uma UF para o tipo de documento selecionado");
-            }
-
-            this.Numero = TipoDocumento.GerarFake(this);
-        }
-
+        public abstract string GerarFake();
     }
 }

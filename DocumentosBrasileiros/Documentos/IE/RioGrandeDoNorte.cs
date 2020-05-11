@@ -1,10 +1,11 @@
 ﻿using DocumentosBrasileiros.Enums;
 using DocumentosBrasileiros.Helpers;
 using System;
+using DocumentosBrasileiros.Interfaces;
 
 namespace DocumentosBrasileiros.Documentos.IE
 {
-    public class RioGrandeDoNorte : IDocumentoEstadual
+    public class RioGrandeDoNorte : IInscricaoEstadual
     {
         public UfEnum UfEnum => UfEnum.RN;
 

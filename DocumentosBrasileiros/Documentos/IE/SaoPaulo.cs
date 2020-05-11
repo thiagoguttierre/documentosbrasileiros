@@ -1,9 +1,10 @@
 ﻿using DocumentosBrasileiros.Enums;
 using System;
+using DocumentosBrasileiros.Interfaces;
 
 namespace DocumentosBrasileiros.Documentos.IE
 {
-    public class SaoPaulo : IDocumentoEstadual
+    public class SaoPaulo : IInscricaoEstadual
     {
         public UfEnum UfEnum => UfEnum.SP;
 

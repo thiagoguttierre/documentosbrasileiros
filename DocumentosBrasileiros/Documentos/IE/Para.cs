@@ -1,10 +1,11 @@
 ﻿using DocumentosBrasileiros.Enums;
 using DocumentosBrasileiros.Helpers;
 using System;
+using DocumentosBrasileiros.Interfaces;
 
 namespace DocumentosBrasileiros.Documentos.IE
 {
-    public class Para : IDocumentoEstadual
+    public class Para : IInscricaoEstadual
     {
         public UfEnum UfEnum => UfEnum.PA;
 

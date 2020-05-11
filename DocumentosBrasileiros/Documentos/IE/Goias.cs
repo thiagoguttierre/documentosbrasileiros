@@ -1,6 +1,7 @@
 ﻿using DocumentosBrasileiros.Enums;
 using System;
 using System.Linq;
+using DocumentosBrasileiros.Interfaces;
 
 namespace DocumentosBrasileiros.Documentos.IE
 {
@@ -10,7 +11,7 @@ namespace DocumentosBrasileiros.Documentos.IE
     /// <param name="inscricaoEstadual"></param>
     /// <returns></returns>
     
-    public class Goias : IDocumentoEstadual
+    public class Goias : IInscricaoEstadual
     {
         public UfEnum UfEnum => UfEnum.GO;
       

@@ -1,9 +1,10 @@
 ﻿using DocumentosBrasileiros.Enums;
 using System;
+using DocumentosBrasileiros.Interfaces;
 
 namespace DocumentosBrasileiros.Documentos.IE
 {
-    public class Ceara : IDocumentoEstadual
+    public class Ceara : IInscricaoEstadual
     {
         public UfEnum UfEnum => UfEnum.CE;
 

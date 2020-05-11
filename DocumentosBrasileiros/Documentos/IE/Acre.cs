@@ -1,9 +1,10 @@
 ﻿using DocumentosBrasileiros.Enums;
 using DocumentosBrasileiros.Helpers;
+using DocumentosBrasileiros.Interfaces;
 
 namespace DocumentosBrasileiros.Documentos.IE
 {
-    public class Acre : IDocumentoEstadual
+    public class Acre : IInscricaoEstadual
     {
         public UfEnum UfEnum => UfEnum.AC;
 
@@ -25,14 +26,12 @@ namespace DocumentosBrasileiros.Documentos.IE
 
         public string GerarFake()
         {
-            string inscricaoSemDigito = "01".RandomNumbers(8);
+            string inscricaoSemDigito = "01".RandomNumbers(9);
 
             string digito1 = new DigitoVerificador().ObterDigitoMod11("0" + inscricaoSemDigito, _peso).ToString();
             string digito2 = new DigitoVerificador().ObterDigitoMod11(inscricaoSemDigito + digito1, _peso).ToString();
 
             return inscricaoSemDigito + digito1 + digito2;
         }
-
-
     }
 }

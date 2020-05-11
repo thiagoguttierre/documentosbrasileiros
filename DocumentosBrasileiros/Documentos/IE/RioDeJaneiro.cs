@@ -1,10 +1,11 @@
 ﻿using DocumentosBrasileiros.Enums;
 using DocumentosBrasileiros.Helpers;
 using System;
+using DocumentosBrasileiros.Interfaces;
 
 namespace DocumentosBrasileiros.Documentos.IE
 {
-    public class RioDeJaneiro : IDocumentoEstadual
+    public class RioDeJaneiro : IInscricaoEstadual
     {
         public UfEnum UfEnum => UfEnum.RJ;
 

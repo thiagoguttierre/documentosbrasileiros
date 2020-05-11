@@ -1,9 +1,10 @@
 ﻿using DocumentosBrasileiros.Enums;
 using System;
+using DocumentosBrasileiros.Interfaces;
 
 namespace DocumentosBrasileiros.Documentos.IE
 {
-    public class EspiritoSanto : IDocumentoEstadual
+    public class EspiritoSanto : IInscricaoEstadual
     {
         public UfEnum UfEnum => UfEnum.ES;
 

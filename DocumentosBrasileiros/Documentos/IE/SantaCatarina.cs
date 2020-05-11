@@ -2,10 +2,11 @@
 using DocumentosBrasileiros.Helpers;
 using System;
 using System.Linq;
+using DocumentosBrasileiros.Interfaces;
 
 namespace DocumentosBrasileiros.Documentos.IE
 {
-    public class SantaCatarina : IDocumentoEstadual
+    public class SantaCatarina : IInscricaoEstadual
     {
         public UfEnum UfEnum => UfEnum.SC;
 
