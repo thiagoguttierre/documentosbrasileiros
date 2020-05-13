@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Validação e criação de números de documentos brasileiros, como CNH, CPF, PIS, CNP" +
     "J, Renavam e Inscrição Estadual")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.0.1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.0.2")]
 [assembly: System.Reflection.AssemblyProductAttribute("DocumentosBrasileiros")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DocumentosBrasileiros")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
