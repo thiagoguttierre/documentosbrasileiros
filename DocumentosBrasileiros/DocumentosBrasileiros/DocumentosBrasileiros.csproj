@@ -6,7 +6,7 @@
     <Authors>Thiago Guttierre</Authors>
     <Company>Thiago Guttierre</Company>
     <Copyright></Copyright>
-    <PackageLicenseExpression>GNU GPLv3</PackageLicenseExpression>
+    <PackageLicenseExpression>AGPL-3.0-or-later</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/thiagoguttierre/documentosbrasileiros</PackageProjectUrl>
     <RepositoryUrl>https://github.com/thiagoguttierre/documentosbrasileiros</RepositoryUrl>
     <RepositoryType />
