@@ -1,0 +1,8 @@
+C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros\bin\Debug\netcoreapp3.1\DocumentosBrasileiros.deps.json
+C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros\bin\Debug\netcoreapp3.1\DocumentosBrasileiros.dll
+C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros\bin\Debug\netcoreapp3.1\DocumentosBrasileiros.pdb
+C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros\obj\Debug\netcoreapp3.1\DocumentosBrasileiros.csprojAssemblyReference.cache
+C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros\obj\Debug\netcoreapp3.1\DocumentosBrasileiros.AssemblyInfoInputs.cache
+C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros\obj\Debug\netcoreapp3.1\DocumentosBrasileiros.AssemblyInfo.cs
+C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros\obj\Debug\netcoreapp3.1\DocumentosBrasileiros.dll
+C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros\obj\Debug\netcoreapp3.1\DocumentosBrasileiros.pdb

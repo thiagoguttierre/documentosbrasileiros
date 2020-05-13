@@ -6,9 +6,6 @@ C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros.Test\bin
 C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros.Test\bin\Debug\netcoreapp3.1\DocumentosBrasileiros.Test.runtimeconfig.dev.json
 C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros.Test\bin\Debug\netcoreapp3.1\DocumentosBrasileiros.Test.dll
 C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros.Test\bin\Debug\netcoreapp3.1\DocumentosBrasileiros.Test.pdb
-C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros.Test\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
-C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros.Test\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
-C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros.Test\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.VisualBasic.dll
 C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros.Test\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
 C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros.Test\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
 C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros.Test\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.CoreUtilities.dll
@@ -18,7 +15,6 @@ C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros.Test\bin
 C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros.Test\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.CrossPlatEngine.dll
 C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros.Test\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.Common.dll
 C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros.Test\bin\Debug\netcoreapp3.1\testhost.dll
-C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros.Test\bin\Debug\netcoreapp3.1\Microsoft.VisualBasic.dll
 C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros.Test\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
 C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros.Test\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
 C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros.Test\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
@@ -88,14 +84,6 @@ C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros.Test\bin
 C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros.Test\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
 C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros.Test\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros.Test\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros.Test\bin\Debug\netcoreapp3.1\runtimes\debian-x64\native\libuv.so
-C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros.Test\bin\Debug\netcoreapp3.1\runtimes\fedora-x64\native\libuv.so
-C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros.Test\bin\Debug\netcoreapp3.1\runtimes\opensuse-x64\native\libuv.so
-C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros.Test\bin\Debug\netcoreapp3.1\runtimes\osx\native\libuv.dylib
-C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros.Test\bin\Debug\netcoreapp3.1\runtimes\rhel-x64\native\libuv.so
-C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros.Test\bin\Debug\netcoreapp3.1\runtimes\win7-arm\native\libuv.dll
-C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros.Test\bin\Debug\netcoreapp3.1\runtimes\win7-x64\native\libuv.dll
-C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros.Test\bin\Debug\netcoreapp3.1\runtimes\win7-x86\native\libuv.dll
 C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros.Test\bin\Debug\netcoreapp3.1\DocumentosBrasileiros.dll
 C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros.Test\bin\Debug\netcoreapp3.1\DocumentosBrasileiros.pdb
 C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros.Test\obj\Debug\netcoreapp3.1\DocumentosBrasileiros.Test.csprojAssemblyReference.cache
