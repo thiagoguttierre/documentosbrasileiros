@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using DocumentosBrasileiros.Enums;
+using DocumentosBrasileiros.Helpers;
 using DocumentosBrasileiros.Interfaces;
 
 namespace DocumentosBrasileiros.IE
@@ -10,45 +11,77 @@ namespace DocumentosBrasileiros.IE
     {
         public UfEnum UfEnum => UfEnum.BA;
 
-        private readonly int[] _peso = { 9, 8, 7, 6, 5, 4, 3, 2 };
+        private readonly int[] _pesoDigito2 = { 8, 7, 6, 5, 4, 3, 2 };
+        private readonly int[] _pesoDigito1 = { 9, 8, 7, 6, 5, 4, 3, 2 };
 
         public bool Validar(string inscricaoEstadual)
         {
             int size = inscricaoEstadual.Length;
-            if (size < 8 || size > 9) return false;
+            if (size < 8 || size > 9)
+            {
+                return false;
+            }
 
-            string inscricaoSemDigito = inscricaoEstadual.Substring(0, size == 8 ? 6 : 7);
-            int digito2 = ObterDigito(inscricaoSemDigito, inscricaoEstadual.Length);
-            int digito1 = ObterDigito(inscricaoSemDigito + digito2.ToString(), inscricaoEstadual.Length);
+            inscricaoEstadual = inscricaoEstadual.Length == 8
+                ? inscricaoEstadual.PadLeft(9, '0')
+                : inscricaoEstadual;
 
-            return inscricaoEstadual == $"{inscricaoSemDigito}{digito1}{digito2}";
+            var inscricaoSemDigito = inscricaoEstadual.Substring(0, 7);
+
+            var digitos = ObterDigitos(inscricaoSemDigito);
+
+            return inscricaoEstadual == $"{inscricaoSemDigito}{digitos}";
         }
-        private int ObterDigito(string inscricaoSemDigito, int qtdeCaracteresTotal)
+        private string ObterDigitos(string inscricaoSemDigito)
         {
-            int modulo;
+            string segundoDigito = inscricaoSemDigito.Substring(1, 1);
 
-            if (qtdeCaracteresTotal == 8)
-            {
-                modulo = (inscricaoSemDigito.StartsWith("6") || inscricaoSemDigito.StartsWith("7") || inscricaoSemDigito.StartsWith("9")) ? 11 : 10;
-            }
-            else
-            {
-                modulo = new List<string> { "6", "7", "9" }.Any(x => x == inscricaoSemDigito.Substring(1, 1)) ? 11 : 10;
-            }
+            int mod =
+                new List<string> { "0", "1", "2", "3", "4", "5", "8" }.Contains(segundoDigito)
+                    ? 10
+                    : 11;
 
-            inscricaoSemDigito = inscricaoSemDigito.PadLeft(_peso.Length, '0');
+            return mod == 10
+                ? ObterDigitosMod10(inscricaoSemDigito)
+                : ObterDigitosMod11(inscricaoSemDigito);
+        }
+        private string ObterDigitosMod10(string inscricaoSemDigito)
+        {
+            int mod = 10;
 
-            var soma = 0;
-            for (var i = 0; i < inscricaoSemDigito.Length; i++)
-            {
-                soma += int.Parse(inscricaoSemDigito[i].ToString()) * _peso[i];
-            }
+            inscricaoSemDigito = inscricaoSemDigito.PadLeft(_pesoDigito2.Length, '0');
 
-            var resto = soma % modulo;
-
-            return modulo == 11 && resto < 2 || resto == 0
+            var resto = new DigitoVerificador().ObterMod(inscricaoSemDigito, _pesoDigito2, mod);
+            int digito2 = resto == 0
                 ? 0
-                : modulo - resto;
+                : mod - resto;
+
+            var resto2 = new DigitoVerificador().ObterMod($"{inscricaoSemDigito + digito2}", _pesoDigito1, mod);
+
+            int digito1 = resto2 == 0
+                ? 0
+                : mod - resto2;
+
+            return $"{digito1}{digito2}";
+        }
+        private string ObterDigitosMod11(string inscricaoSemDigito)
+        {
+            int mod = 11;
+
+            inscricaoSemDigito = inscricaoSemDigito.PadLeft(_pesoDigito2.Length, '0');
+
+            var resto = new DigitoVerificador().ObterMod(inscricaoSemDigito, _pesoDigito2, mod);
+            int digito2 = resto == 0 || resto == 1
+                ? 0
+                : mod - resto;
+
+            var resto2 = new DigitoVerificador().ObterMod($"{inscricaoSemDigito + digito2}", _pesoDigito1, mod);
+
+            int digito1 = resto2 == 0 || resto2 == 1
+                ? 0
+                : mod - resto2;
+
+            return $"{digito1}{digito2}";
         }
 
         public string GerarFake()
@@ -59,10 +92,9 @@ namespace DocumentosBrasileiros.IE
             {
                 inscricaoSemDigito += rnd.Next(0, 9).ToString();
             }
-            var digito2 = ObterDigito(inscricaoSemDigito, 8);
-            var digito1 = ObterDigito($"{inscricaoSemDigito}{digito2}", 8);
+            var digitos = ObterDigitos(inscricaoSemDigito);
 
-            return $"{inscricaoSemDigito}{digito1}{digito2}";
+            return $"{inscricaoSemDigito}{digitos}";
         }
     }
 }

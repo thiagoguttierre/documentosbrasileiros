@@ -28,9 +28,9 @@ namespace DocumentosBrasileiros.Test
                 }
             }
 
-            
 
-            Assert.IsTrue(!errors.Any(), string.Join(". ",errors));
+
+            Assert.IsTrue(!errors.Any(), string.Join(". ", errors));
         }
 
 
@@ -39,6 +39,33 @@ namespace DocumentosBrasileiros.Test
         {
             var doc = new InscricaoEstadual("857.604.844.470", Enums.UfEnum.SP);
             Assert.IsTrue(doc.DocumentoValido());
+        }
+
+        [TestMethod]
+        public void ValidacaoIe_Ba()
+        {
+            var errors = new List<string>();
+
+            new List<string>
+            {
+                "1 6 2 3 4 5 6 - 5 1",
+                "123456748",
+                "080917-69"
+            }.ForEach(x => Assert.IsTrue(new InscricaoEstadual(x, UfEnum.BA).DocumentoValido()));
+
+            for (int i = 0; i < 10; i++)
+            {
+                var doc = new InscricaoEstadual(UfEnum.BA);
+                doc.GerarFake();
+                var docValido = doc.DocumentoValido();
+
+                if (!docValido)
+                {
+                    errors.Add($"falhou no teste de inscrição estadual com o número {doc.Numero}");
+                }
+            }
+
+            Assert.IsTrue(!errors.Any(), string.Join(". ", errors));
         }
     }
 }

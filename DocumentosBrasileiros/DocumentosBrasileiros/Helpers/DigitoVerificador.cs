@@ -20,6 +20,7 @@
         //Obtem o mód da soma;
         public int ObterMod(string numeroSemDigito, int[] peso, int mod = 11)
         {
+
             int soma = 0;
             for (int i = 0; i < peso.Length; ++i)
             {
@@ -27,6 +28,7 @@
             }
 
             return soma % mod;
+
         }
     }
 }
