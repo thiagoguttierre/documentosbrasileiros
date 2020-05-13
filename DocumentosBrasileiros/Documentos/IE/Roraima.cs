@@ -1,25 +1,26 @@
 ﻿using DocumentosBrasileiros.Enums;
 using DocumentosBrasileiros.Helpers;
 using System;
+using DocumentosBrasileiros.Interfaces;
 
 namespace DocumentosBrasileiros.Documentos.IE
 {
-    public class Roraima : IDocumentoEstadual
+    public class Roraima : IInscricaoEstadual
     {
-        public UF UF => UF.SC;
+        public UfEnum UfEnum => UfEnum.RR;
 
-        public readonly int[] peso = { 1, 2, 3, 4, 5, 6, 7, 8 };
-        public bool IsValid(string inscricaoEstadual)
+        private readonly int[] _peso = { 1, 2, 3, 4, 5, 6, 7, 8 };
+        public bool Validar(string inscricaoEstadual)
         {
             if (inscricaoEstadual.Length != 9 || !inscricaoEstadual.StartsWith("24")) return false;
 
             string inscricaoSemDigito = inscricaoEstadual.Substring(0, 8);
 
             return inscricaoEstadual ==
-            inscricaoSemDigito + new DigitoVerificador().ObterDigitoMod9(inscricaoSemDigito, peso).ToString();
+            inscricaoSemDigito + new DigitoVerificador().ObterDigitoMod9(inscricaoSemDigito, _peso).ToString();
         }
 
-        public string GenerateFake()
+        public string GerarFake()
         {
             string inscricaoSemDigito = "24";
             Random rnd = new Random();
@@ -28,7 +29,7 @@ namespace DocumentosBrasileiros.Documentos.IE
                 inscricaoSemDigito += rnd.Next(0, 9).ToString();
             }
 
-            return inscricaoSemDigito + new DigitoVerificador().ObterDigitoMod9(inscricaoSemDigito, peso);
+            return inscricaoSemDigito + new DigitoVerificador().ObterDigitoMod9(inscricaoSemDigito, _peso);
         }
 
     }

@@ -1,15 +1,16 @@
 ﻿using DocumentosBrasileiros.Enums;
 using DocumentosBrasileiros.Helpers;
 using System;
+using DocumentosBrasileiros.Interfaces;
 
 namespace DocumentosBrasileiros.Documentos.IE
 {
-    public class Maranhao : IDocumentoEstadual
+    public class Maranhao : IInscricaoEstadual
     {
-        public UF UF => UF.MA;
+        public UfEnum UfEnum => UfEnum.MA;
 
         private readonly int[] peso = { 9, 8, 7, 6, 5, 4, 3, 2 };
-        public bool IsValid(string inscricaoEstadual)
+        public bool Validar(string inscricaoEstadual)
         {
             if (inscricaoEstadual.Length != 9) return false;
 
@@ -22,7 +23,7 @@ namespace DocumentosBrasileiros.Documentos.IE
             return inscricaoSemDigito + digito1 == inscricaoEstadual;
         }
 
-        public string GenerateFake()
+        public string GerarFake()
         {
             string inscricaoSemDigito = "12";
             Random rnd = new Random();

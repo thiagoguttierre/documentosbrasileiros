@@ -1,17 +1,20 @@
 ﻿using DocumentosBrasileiros.Helpers;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace DocumentosBrasileiros.Documentos
 {
-    public class PIS : ITipoDocumento
+    public class Pis : Documento
     {
-        private readonly int[] pesos = { 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
+        private readonly int[] _pesos = { 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
 
-        public bool Validar(Documento documento)
+        public Pis() { }
+        public Pis(string numero)
         {
-            string pis = documento.Numero;
+            Numero = numero;
+        }
+
+        protected override bool Validar()
+        {
+            string pis = Numero;
 
             //Verifica o tamanho da string
             if (pis.Length != 11) return false;
@@ -21,17 +24,17 @@ namespace DocumentosBrasileiros.Documentos
             return pis.EndsWith(ObterDigitos(pis));
         }
 
-        public string GenerateFake(Documento documento)
+        public override string GerarFake()
         {
-            string pis = "".RandomNumbers(9);
+            string pis = "".RandomNumbers(10);
+            Numero = pis + ObterDigitos(pis);
 
-            return pis + ObterDigitos(pis);
+            return Numero;
         }
 
         private string ObterDigitos(string pis)
         {
-            return new DigitoVerificador().ObterDigitoMod11(pis, pesos).ToString();
+            return new DigitoVerificador().ObterDigitoMod11(pis, _pesos).ToString();
         }
-
     }
 }

@@ -1,16 +1,14 @@
 ﻿using DocumentosBrasileiros.Helpers;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace DocumentosBrasileiros.Documentos
 {
-    public class CPF : ITipoDocumento
+    public class Cpf : Documento
     {
-        public readonly int[] pesos = { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };
-        public bool Validar(Documento documento)
+        private readonly int[] _pesos = { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };
+
+        protected override bool Validar()
         {
-            string cpf = documento.Numero;
+            string cpf = Numero;
 
             //verifica o tamanho da string 
             if (cpf.Length < 11) return false;
@@ -19,18 +17,20 @@ namespace DocumentosBrasileiros.Documentos
 
             return cpf.EndsWith(ObterDigitos(cpf));
         }
-        public string GenerateFake(Documento documento)
-        {
-            string cpf = "".RandomNumbers(8);
 
-            return cpf + ObterDigitos(cpf);
+        public override string GerarFake()
+        {
+            string cpf = "".RandomNumbers(9);
+            Numero = cpf + ObterDigitos(cpf);
+
+            return Numero;
         }
 
         private string ObterDigitos(string cpf)
         {
             DigitoVerificador digitoVerifador = new DigitoVerificador();
-            int d1 = digitoVerifador.ObterDigitoMod11("0" + cpf, pesos);
-            int d2 = digitoVerifador.ObterDigitoMod11(cpf + d1.ToString(), pesos);
+            int d1 = digitoVerifador.ObterDigitoMod11("0" + cpf, _pesos);
+            int d2 = digitoVerifador.ObterDigitoMod11(cpf + d1.ToString(), _pesos);
 
             return d1.ToString() + d2.ToString();
         }

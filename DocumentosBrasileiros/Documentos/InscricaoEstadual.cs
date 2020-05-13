@@ -1,50 +1,46 @@
 ﻿using DocumentosBrasileiros.Documentos.IE;
-using DocumentosBrasileiros.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
-using System.Text;
+using DocumentosBrasileiros.Enums;
+using DocumentosBrasileiros.Interfaces;
 
 namespace DocumentosBrasileiros.Documentos
 {
-    public class InscricaoEstadual : ITipoDocumento
+    public class InscricaoEstadual : Documento
     {
-        public bool Validar(Documento documento)
+        public InscricaoEstadual(UfEnum uf)
         {
-            if (documento.UF == null)
+            Uf = uf;
+        }
+
+        public InscricaoEstadual(string numero, UfEnum uf)
+        {
+            Uf = uf;
+            Numero = numero;
+        }
+
+        public UfEnum? Uf { get; set; }
+
+        protected override bool Validar()
+        {
+            if (Uf == null)
             {
                 throw new Exception("A UF do documento não foi informada");
             }
 
-            string inscricao = documento.Numero;
-
-            if (inscricao.ToUpper().Equals("ISENTO")) return true;
-
-            IDocumentoEstadual validacaoIE = GetEstado(documento);
-
-            return validacaoIE.IsValid(documento.Numero);
+            return Numero.ToUpper().Equals("ISENTO") || GetEstado().Validar(Numero);
         }
 
-        public string GenerateFake(Documento documento)
+        public override string GerarFake()
         {
-            IDocumentoEstadual validacaoIE = GetEstado(documento);
-
-            return validacaoIE.GenerateFake();
+            Numero = GetEstado().GerarFake();
+            return Numero;
         }
 
-        private IDocumentoEstadual GetEstado(Documento documento)
+        private IInscricaoEstadual GetEstado()
         {
-            // System.Reflection.Assembly assembly = System.Reflection.Assembly.GetEntryAssembly();
-
-            //var allClasses =  assembly.DefinedTypes
-            //     .Where(type => type.ImplementedInterfaces.Contains(typeof(IDocumentoEstadual)));
-            // return assembly.DefinedTypes
-            //     .Where(type => type.ImplementedInterfaces.Contains(typeof(IDocumentoEstadual)) && type.Namespace.Contains("IE"))
-            //     .Select(x => assembly.CreateInstance(x.FullName) as IDocumentoEstadual).FirstOrDefault(x => x.UF == documento.UF);
-
-
-            List<IDocumentoEstadual> ieEstados = new List<IDocumentoEstadual>
+            var ieEstados = new List<IInscricaoEstadual>
             {
                 new Acre(),
                 new Alagoas(),
@@ -75,7 +71,7 @@ namespace DocumentosBrasileiros.Documentos
                 new Tocantins()
             };
 
-            return ieEstados.FirstOrDefault(x => x.UF == documento.UF);
+            return ieEstados.FirstOrDefault(x => x.UfEnum == Uf);
         }
     }
 }

@@ -1,17 +1,20 @@
 ﻿using DocumentosBrasileiros.Helpers;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace DocumentosBrasileiros.Documentos
 {
-    public class CNPJ : ITipoDocumento
+    public class Cnpj : Documento
     {
-        private readonly int[] pesos = { 6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
-
-        public bool Validar(Documento documento)
+        private readonly int[] _pesos = { 6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
+        
+        public Cnpj() { }
+        public Cnpj(string numero)
         {
-            string cnpj = documento.Numero;
+            Numero = numero;
+        }
+        
+        protected override bool Validar()
+        {
+            string cnpj = Numero;
 
             //verifica o tamanho da string 
             if (cnpj.Length != 14) return false;
@@ -20,18 +23,20 @@ namespace DocumentosBrasileiros.Documentos
 
             return cnpj.EndsWith(ObterDigitos(cnpj));
         }
-        public string GenerateFake(Documento documento)
-        {
-            string cnpj = "".RandomNumbers(11);
 
-            return cnpj + ObterDigitos(cnpj);
+        public override string GerarFake()
+        {
+            Numero = "".RandomNumbers(12);
+            Numero = Numero + ObterDigitos(Numero);
+
+            return Numero;
         }
 
         private string ObterDigitos(string cnpj)
         {
             var digitoVerificador = new DigitoVerificador();
-            int d1 = digitoVerificador.ObterDigitoMod11("0" + cnpj, pesos);
-            int d2 = digitoVerificador.ObterDigitoMod11(cnpj + d1.ToString(), pesos);
+            int d1 = digitoVerificador.ObterDigitoMod11("0" + cnpj, _pesos);
+            int d2 = digitoVerificador.ObterDigitoMod11(cnpj + d1.ToString(), _pesos);
 
             return d1.ToString() + d2.ToString();
         }

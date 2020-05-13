@@ -1,15 +1,16 @@
 ﻿using DocumentosBrasileiros.Enums;
 using System;
+using DocumentosBrasileiros.Interfaces;
 
 namespace DocumentosBrasileiros.Documentos.IE
 {
-    public class Ceara : IDocumentoEstadual
+    public class Ceara : IInscricaoEstadual
     {
-        public UF UF => UF.CE;
+        public UfEnum UfEnum => UfEnum.CE;
 
         private readonly int[] peso = { 9, 8, 7, 6, 5, 4, 3, 2 };
 
-        public bool IsValid(string inscricao)
+        public bool Validar(string inscricao)
         {
             if (inscricao.Length != 9) return false;
 
@@ -31,7 +32,7 @@ namespace DocumentosBrasileiros.Documentos.IE
             return digito;
         }
 
-        public string GenerateFake()
+        public string GerarFake()
         {
             string inscricaoSemDigito = "";
             Random rnd = new Random();

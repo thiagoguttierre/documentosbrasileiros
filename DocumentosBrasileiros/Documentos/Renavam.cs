@@ -1,18 +1,22 @@
 ﻿using DocumentosBrasileiros.Helpers;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 
 namespace DocumentosBrasileiros.Documentos
 {
-    public class Renavam : ITipoDocumento
+    public class Renavam : Documento
     {
+        private readonly int[] _pesos = { 2, 3, 4, 5, 6, 7, 8, 9, 2, 3 };
 
-        public readonly int[] pesos = { 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
+        public Renavam() { }
 
-        public bool Validar(Documento documento)
+        public Renavam(string numero)
         {
-            string renavam = documento.Numero;
+            Numero = numero;
+        }
+
+        protected override bool Validar()
+        {
+            string renavam = Numero;
 
             //Verifica o tamanho da string
             if (renavam.Length != 9 && renavam.Length != 11) return false;
@@ -20,19 +24,33 @@ namespace DocumentosBrasileiros.Documentos
             if (renavam.AllCharsAreEqual()) return false;
 
             //coloca 0 a esquerda caso o renavam tenha 9 dígitos
-            renavam = Convert.ToInt64(renavam).ToString("00000000000");
+            renavam = renavam.PadLeft(11, '0');
 
-            return renavam.EndsWith(ObterDigito(renavam));
+
+
+            var digito = ObterDigito(renavam.Substring(0, renavam.Length - 1));
+
+            return renavam.EndsWith(digito);
         }
-        public string GenerateFake(Documento documento)
+
+        public override string GerarFake()
         {
-            throw new NotImplementedException();
+            string renavam = "".RandomNumbers(10);
+            Numero = renavam + ObterDigito(renavam);
+            
+            return Numero;
         }
 
         private string ObterDigito(string renavam)
         {
-            int digito = new DigitoVerificador().ObterMod(renavam, pesos);
-            digito = digito > 9 ? 0 : digito;
+            var reversoSemDigito = string.Join("", renavam.ToCharArray().Reverse());
+
+            var mod11 = new DigitoVerificador().ObterMod(reversoSemDigito, _pesos);
+
+            var digito = 11 - mod11;
+
+            digito = digito >= 10 ? 0 : digito;
+
             return digito.ToString();
         }
     }

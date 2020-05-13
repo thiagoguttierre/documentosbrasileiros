@@ -1,15 +1,16 @@
 ﻿using DocumentosBrasileiros.Enums;
 using DocumentosBrasileiros.Helpers;
 using System;
+using DocumentosBrasileiros.Interfaces;
 
 namespace DocumentosBrasileiros.Documentos.IE
 {
-    public class RioDeJaneiro : IDocumentoEstadual
+    public class RioDeJaneiro : IInscricaoEstadual
     {
-        public UF UF => UF.RJ;
+        public UfEnum UfEnum => UfEnum.RJ;
 
         private readonly int[] peso = { 2, 7, 6, 5, 4, 3, 2 };
-        public bool IsValid(string inscricaoEstadual)
+        public bool Validar(string inscricaoEstadual)
         {
             if (inscricaoEstadual.Length != 8) return false;
 
@@ -19,7 +20,7 @@ namespace DocumentosBrasileiros.Documentos.IE
             inscricaoSemDigito + new DigitoVerificador().ObterDigitoMod11(inscricaoSemDigito, peso).ToString();
         }
 
-        public string GenerateFake()
+        public string GerarFake()
         {
             string inscricaoSemDigito = "";
             Random rnd = new Random();

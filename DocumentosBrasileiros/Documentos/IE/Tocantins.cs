@@ -2,6 +2,7 @@
 using DocumentosBrasileiros.Helpers;
 using System;
 using System.Collections.Generic;
+using DocumentosBrasileiros.Interfaces;
 
 namespace DocumentosBrasileiros.Documentos.IE
 {
@@ -11,9 +12,9 @@ namespace DocumentosBrasileiros.Documentos.IE
     /// N(*2)T(*2)(N*6)(D)
     /// Valores possíveis de T:01 - Produtor Rural. 02 - Industria e Comércio. 03 - Empresas Rudimentares. 99 = Empresas do Cadastro Antigo (SUSPENSAS)
     /// </summary>
-    public class Tocantins : IDocumentoEstadual
+    public class Tocantins : IInscricaoEstadual
     {
-        public UF UF => UF.TO;
+        public UfEnum UfEnum => UfEnum.TO;
 
         private readonly int[] peso = { 9, 8, 7, 6, 5, 4, 3, 2 };
         private readonly IList<string> T = new List<string> {
@@ -21,7 +22,7 @@ namespace DocumentosBrasileiros.Documentos.IE
             "02" /*Industria e Comercio*/,
             "03" /*Empresas Rudimentares*/,
             "99" /*Empresas de Cadastro Antigo (SUSPENSAS)*/ };
-        public bool IsValid(string inscricaoEstadual)
+        public bool Validar(string inscricaoEstadual)
         {
             if (inscricaoEstadual.Length == 11)
             {
@@ -55,7 +56,7 @@ namespace DocumentosBrasileiros.Documentos.IE
             return inscricaoEstadual.EndsWith(digito);
         }
 
-        public string GenerateFake()
+        public string GerarFake()
         {
             string inscricaoSemDigitoSemT = "";
             Random rnd = new Random();

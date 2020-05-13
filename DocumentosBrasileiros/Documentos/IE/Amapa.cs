@@ -1,5 +1,6 @@
 ﻿using DocumentosBrasileiros.Enums;
 using System;
+using DocumentosBrasileiros.Interfaces;
 
 namespace DocumentosBrasileiros.Documentos.IE
 {
@@ -11,12 +12,12 @@ namespace DocumentosBrasileiros.Documentos.IE
     /// Fonte: http://www.sintegra.gov.br/Cad_Estados/cad_AP.html
     /// </summary>
     /// 
-    public class Amapa : IDocumentoEstadual
+    public class Amapa : IInscricaoEstadual
     {
-        public UF UF => UF.AP;
-        private readonly int[] peso = { 9, 8, 7, 6, 5, 4, 3, 2 };
+        public UfEnum UfEnum => UfEnum.AP;
+        private readonly int[] _peso = { 9, 8, 7, 6, 5, 4, 3, 2 };
 
-        public bool IsValid(string inscricaoEstadual)
+        public bool Validar(string inscricaoEstadual)
         {
             if (inscricaoEstadual.Length != 9) return false;
             if (!inscricaoEstadual.StartsWith("03")) return false;
@@ -44,8 +45,8 @@ namespace DocumentosBrasileiros.Documentos.IE
 
 
             int soma = p;
-            for (int i = 0; i < peso.Length; ++i)
-                soma += peso[i] * Convert.ToInt32(inscricaoSemDigito[i].ToString());
+            for (int i = 0; i < _peso.Length; ++i)
+                soma += _peso[i] * Convert.ToInt32(inscricaoSemDigito[i].ToString());
 
             int digito = 11 - soma % 11;
 
@@ -56,7 +57,7 @@ namespace DocumentosBrasileiros.Documentos.IE
             return digito;
         }
 
-        public string GenerateFake()
+        public string GerarFake()
         {
             string inscricaoSemDigito = "03";
             Random rnd = new Random();

@@ -1,15 +1,16 @@
 ﻿using DocumentosBrasileiros.Enums;
 using DocumentosBrasileiros.Helpers;
 using System;
+using DocumentosBrasileiros.Interfaces;
 
 namespace DocumentosBrasileiros.Documentos.IE
 {
-    public class RioGrandeDoNorte : IDocumentoEstadual
+    public class RioGrandeDoNorte : IInscricaoEstadual
     {
-        public UF UF => UF.RN;
+        public UfEnum UfEnum => UfEnum.RN;
 
         private readonly int[] peso = { 0, 9, 8, 7, 6, 5, 4, 3, 2 };
-        public bool IsValid(string inscricaoEstadual)
+        public bool Validar(string inscricaoEstadual)
         {
             if (inscricaoEstadual.Length < 9 || inscricaoEstadual.Length > 10) return false;
             if (!inscricaoEstadual.StartsWith("20")) return false;
@@ -23,7 +24,7 @@ namespace DocumentosBrasileiros.Documentos.IE
 
         }
 
-        public string GenerateFake()
+        public string GerarFake()
         {
             string inscricaoSemDigito = "20";
             Random rnd = new Random();

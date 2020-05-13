@@ -1,16 +1,17 @@
 ﻿using DocumentosBrasileiros.Enums;
 using DocumentosBrasileiros.Helpers;
 using System;
+using DocumentosBrasileiros.Interfaces;
 
 namespace DocumentosBrasileiros.Documentos.IE
 {
-    public class Rondonia :IDocumentoEstadual
+    public class Rondonia :IInscricaoEstadual
     {
-        public UF UF => UF.RO;
+        public UfEnum UfEnum => UfEnum.RO;
 
         private readonly int[] pesoIEAntiga = { 6, 5, 4, 3, 2 };
         private readonly int[] pesoIENova = { 6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
-        public bool IsValid(string inscricaoEstadual)
+        public bool Validar(string inscricaoEstadual)
         {
             if (inscricaoEstadual.Length != 9 && inscricaoEstadual.Length != 14) return false;
 
@@ -29,7 +30,7 @@ namespace DocumentosBrasileiros.Documentos.IE
                
         }
 
-        public string GenerateFake()
+        public string GerarFake()
         {
             string inscricaoSemDigito = "";
             Random rnd = new Random();

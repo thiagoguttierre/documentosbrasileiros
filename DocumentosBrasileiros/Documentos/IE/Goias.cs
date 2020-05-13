@@ -1,6 +1,7 @@
 ﻿using DocumentosBrasileiros.Enums;
 using System;
 using System.Linq;
+using DocumentosBrasileiros.Interfaces;
 
 namespace DocumentosBrasileiros.Documentos.IE
 {
@@ -10,11 +11,11 @@ namespace DocumentosBrasileiros.Documentos.IE
     /// <param name="inscricaoEstadual"></param>
     /// <returns></returns>
     
-    public class Goias : IDocumentoEstadual
+    public class Goias : IInscricaoEstadual
     {
-        public UF UF => UF.GO;
+        public UfEnum UfEnum => UfEnum.GO;
       
-        public bool IsValid(string inscricaoEstadual)
+        public bool Validar(string inscricaoEstadual)
         {
             if (inscricaoEstadual.Length != 9) return false;
 
@@ -64,7 +65,7 @@ namespace DocumentosBrasileiros.Documentos.IE
             return new int[1] { dv };
         }
 
-        public string GenerateFake()
+        public string GerarFake()
         {
             string inscricaoSemDigito = "";
 

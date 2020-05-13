@@ -1,16 +1,17 @@
 ﻿using DocumentosBrasileiros.Enums;
 using DocumentosBrasileiros.Helpers;
 using System;
+using DocumentosBrasileiros.Interfaces;
 
 namespace DocumentosBrasileiros.Documentos.IE
 {
-    public class MatoGrossoDoSul : IDocumentoEstadual
+    public class MatoGrossoDoSul : IInscricaoEstadual
     {
-        public UF UF => UF.MS;
+        public UfEnum UfEnum => UfEnum.MS;
 
         private readonly int[] peso = { 9, 8, 7, 6, 5, 4, 3, 2 };
 
-        public bool IsValid(string inscricaoEstadual)
+        public bool Validar(string inscricaoEstadual)
         {
             if (inscricaoEstadual.Length != 9) return false;
 
@@ -23,7 +24,7 @@ namespace DocumentosBrasileiros.Documentos.IE
 
         }
 
-        public string GenerateFake()
+        public string GerarFake()
         {
             string inscricaoSemDigito = "28";
             Random rnd = new Random();
