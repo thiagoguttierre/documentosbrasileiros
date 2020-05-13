@@ -1,0 +1,8 @@
+C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros\DocumentosBrasileiros\obj\Debug\netstandard2.0\DocumentosBrasileiros.csprojAssemblyReference.cache
+C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros\DocumentosBrasileiros\obj\Debug\netstandard2.0\DocumentosBrasileiros.AssemblyInfoInputs.cache
+C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros\DocumentosBrasileiros\obj\Debug\netstandard2.0\DocumentosBrasileiros.AssemblyInfo.cs
+C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros\DocumentosBrasileiros\bin\Debug\netstandard2.0\DocumentosBrasileiros.deps.json
+C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros\DocumentosBrasileiros\bin\Debug\netstandard2.0\DocumentosBrasileiros.dll
+C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros\DocumentosBrasileiros\bin\Debug\netstandard2.0\DocumentosBrasileiros.pdb
+C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros\DocumentosBrasileiros\obj\Debug\netstandard2.0\DocumentosBrasileiros.dll
+C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros\DocumentosBrasileiros\obj\Debug\netstandard2.0\DocumentosBrasileiros.pdb
