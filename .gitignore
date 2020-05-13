@@ -2,6 +2,6 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/.vs/DocumentosBrasileiros/v16/Server/sqlite3
-/.vs/DocumentosBrasileiros/DesignTimeBuild
-/DocumentosBrasileiros/.vs/DocumentosBrasileiros
+/DocumentosBrasileiros/.vs
+/DocumentosBrasileiros/bin
+/DocumentosBrasileiros.Test/bin

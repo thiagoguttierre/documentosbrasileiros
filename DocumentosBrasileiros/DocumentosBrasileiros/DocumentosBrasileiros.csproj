@@ -2,6 +2,17 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>Validação e criação de números de documentos brasileiros, como CNH, CPF, PIS, CNPJ, Renavam e Inscrição Estadual</Description>
+    <Authors>Thiago Guttierre</Authors>
+    <Company>Thiago Guttierre</Company>
+    <Copyright></Copyright>
+    <PackageLicenseExpression>GNU GPLv3</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/thiagoguttierre/documentosbrasileiros</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/thiagoguttierre/documentosbrasileiros</RepositoryUrl>
+    <RepositoryType />
+    <PackageTags>Validação de Documentos Brasileitos, CNH, CPF, PIS, CNPJ, Renavam e Inscrição Estadual</PackageTags>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <Version>2.0.1</Version>
   </PropertyGroup>
 
 </Project>

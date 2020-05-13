@@ -2030,7 +2030,7 @@
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
       },
-      "DocumentosBrasileiros/1.0.0": {
+      "DocumentosBrasileiros/2.0.1": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "compile": {
@@ -6875,7 +6875,7 @@
         "system.xml.xpath.xmldocument.nuspec"
       ]
     },
-    "DocumentosBrasileiros/1.0.0": {
+    "DocumentosBrasileiros/2.0.1": {
       "type": "project",
       "path": "../DocumentosBrasileiros/DocumentosBrasileiros.csproj",
       "msbuildProject": "../DocumentosBrasileiros/DocumentosBrasileiros.csproj"
@@ -6883,7 +6883,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "DocumentosBrasileiros >= 1.0.0",
+      "DocumentosBrasileiros >= 2.0.1",
       "MSTest.TestAdapter >= 2.0.0",
       "MSTest.TestFramework >= 2.0.0",
       "Microsoft.NET.Test.Sdk >= 16.2.0",
