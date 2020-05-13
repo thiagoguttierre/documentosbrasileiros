@@ -33,7 +33,7 @@ jobs:
     
     - name: Generate nuget package
       working-directory: ./DocumentosBrasileiros
-      run: dotnet pack --configuration Release -o nupkg
+      run: dotnet pack --configuration Release -o nupkg -p:PackageVersion=2.0.0
       
     - name: Publish nuget package
       run: find . -name *.nupkg -type f -print0 | xargs -0 -I pkg dotnet nuget push pkg -k $nuget_api_key -s "https://api.nuget.org/v3/index.json" --skip-duplicate
