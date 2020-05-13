@@ -2,6 +2,7 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/DocumentosBrasileiros/.vs
-/DocumentosBrasileiros/bin
-/DocumentosBrasileiros.Test/bin
+/DocumentosBrasileiros/.vs/
+/DocumentosBrasileiros/bin/
+/DocumentosBrasileiros.Test/bin/
+/DocumentosBrasileiros.Test/obj/
