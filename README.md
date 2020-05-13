@@ -10,7 +10,7 @@ Install-Package DocumentosBrasileiros
 
 ### Validando um documento:
 ```
-  Documento doc = new Documento("13975859080", TipoDocumento.CNH); //Número gerado automaticamente
+  Documento doc = new Cnh("13975859080"); //Número gerado automaticamente
   
   bool valido = doc.DocumentoValido();
 ```
@@ -18,9 +18,9 @@ Install-Package DocumentosBrasileiros
 ### Gerando um documento:
   
   ```
-  Documento doc = new Documento(TipoDocumento.CNH);
+  Documento doc = new Cnh();
   
-  doc.GerarDocumento();
+  doc.GerarFake();
   
   string numeroDoc = doc.Numero;
 
