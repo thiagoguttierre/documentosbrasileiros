@@ -18,8 +18,11 @@ jobs:
       with:
         dotnet-version: 3.1.101
     - name: Install dependencies
+      working-directory: ./DocumentosBrasileiros
       run: dotnet restore
     - name: Build
+      working-directory: ./DocumentosBrasileiros
       run: dotnet build --configuration Release --no-restore
     - name: Test
+      working-directory: ./DocumentosBrasileiros/DocumentosBrasileiros.Test
       run: dotnet test --no-restore --verbosity normal
