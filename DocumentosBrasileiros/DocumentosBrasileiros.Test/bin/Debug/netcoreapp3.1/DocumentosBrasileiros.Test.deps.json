@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v3.1": {
       "DocumentosBrasileiros.Test/1.0.0": {
         "dependencies": {
-          "DocumentosBrasileiros": "1.0.0",
+          "DocumentosBrasileiros": "2.0.1",
           "MSTest.TestAdapter": "2.0.0",
           "MSTest.TestFramework": "2.0.0",
           "Microsoft.NET.Test.Sdk": "16.2.0",
@@ -1325,7 +1325,7 @@
           }
         }
       },
-      "DocumentosBrasileiros/1.0.0": {
+      "DocumentosBrasileiros/2.0.1": {
         "runtime": {
           "DocumentosBrasileiros.dll": {}
         }
@@ -2073,7 +2073,7 @@
       "path": "system.xml.xpath.xmldocument/4.0.1",
       "hashPath": "system.xml.xpath.xmldocument.4.0.1.nupkg.sha512"
     },
-    "DocumentosBrasileiros/1.0.0": {
+    "DocumentosBrasileiros/2.0.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
