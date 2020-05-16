@@ -14,19 +14,15 @@ namespace DocumentosBrasileiros
             Numero = numero;
         }
 
-        protected override bool Validar()
+        protected internal override bool Validar()
         {
             string renavam = Numero;
 
             //Verifica o tamanho da string
             if (renavam.Length != 9 && renavam.Length != 11) return false;
 
-            if (renavam.AllCharsAreEqual()) return false;
-
             //coloca 0 a esquerda caso o renavam tenha 9 dígitos
             renavam = renavam.PadLeft(11, '0');
-
-
 
             var digito = ObterDigito(renavam.Substring(0, renavam.Length - 1));
 

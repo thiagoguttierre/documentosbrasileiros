@@ -13,18 +13,21 @@ namespace DocumentosBrasileiros.Test
         public void FakesSaoValidos()
         {
             var ufs = Enum.GetValues(typeof(UfEnum)).Cast<UfEnum>();
-
             var errors = new List<string>();
+
             foreach (var uf in ufs)
             {
-                var doc = new InscricaoEstadual(uf);
-                doc.GerarFake();
-
-                bool docValido = doc.DocumentoValido();
-
-                if (!docValido)
+                for (int i = 0; i <= 10000; i++)
                 {
-                    errors.Add($"{uf} falhou no teste de inscrição estadual com o número {doc.Numero}");
+                    var doc = new InscricaoEstadual(uf);
+                    doc.GerarFake();
+
+                    bool docValido = doc.DocumentoValido();
+
+                    if (!docValido)
+                    {
+                        errors.Add($"{uf} falhou no teste de inscrição estadual com o número {doc.Numero}");
+                    }
                 }
             }
 
@@ -37,7 +40,7 @@ namespace DocumentosBrasileiros.Test
         [TestMethod]
         public void ValidacaoIe_Sp()
         {
-            var doc = new InscricaoEstadual("857.604.844.470", Enums.UfEnum.SP);
+            var doc = new InscricaoEstadual("857.604.844.470", UfEnum.SP);
             Assert.IsTrue(doc.DocumentoValido());
         }
 
@@ -56,6 +59,26 @@ namespace DocumentosBrasileiros.Test
             for (int i = 0; i < 10; i++)
             {
                 var doc = new InscricaoEstadual(UfEnum.BA);
+                doc.GerarFake();
+                var docValido = doc.DocumentoValido();
+
+                if (!docValido)
+                {
+                    errors.Add($"falhou no teste de inscrição estadual com o número {doc.Numero}");
+                }
+            }
+
+            Assert.IsTrue(!errors.Any(), string.Join(". ", errors));
+        }
+
+        [TestMethod]
+        public void ValidacaoIe_Ap()
+        {
+            var errors = new List<string>();
+
+            for (int i = 0; i <= 100000; i++)
+            {
+                var doc = new InscricaoEstadual(UfEnum.AP);
                 doc.GerarFake();
                 var docValido = doc.DocumentoValido();
 

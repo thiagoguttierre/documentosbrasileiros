@@ -12,18 +12,17 @@ namespace DocumentosBrasileiros
             set => _numero = value.RemoveSpecialChars();
         }
 
-        protected abstract bool Validar();
-
         public bool DocumentoValido()
         {
             if (string.IsNullOrEmpty(Numero))
             {
                 throw new Exception("Informe o número do documento");
             }
-
-            return Validar();
+            
+            return !Numero.AllCharsAreEqual() && Validar();
         }
 
+        protected internal abstract bool Validar();
         public abstract string GerarFake();
     }
 }

@@ -13,12 +13,11 @@ namespace DocumentosBrasileiros
             Numero = numero;
         }
 
-        protected override bool Validar()
+        protected internal override bool Validar()
         {
             //verificando se o tamanho da string está correto
             if (Numero.Length != 11) return false;
 
-            if (Numero.AllCharsAreEqual()) return false;
             string digitos = ObterDigitos(Numero);
 
             return Numero.EndsWith(digitos);

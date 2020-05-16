@@ -12,14 +12,12 @@ namespace DocumentosBrasileiros
             Numero = numero;
         }
         
-        protected override bool Validar()
+        protected internal override bool Validar()
         {
             string cnpj = Numero;
 
             //verifica o tamanho da string 
             if (cnpj.Length != 14) return false;
-
-            if (cnpj.AllCharsAreEqual()) return false;
 
             return cnpj.EndsWith(ObterDigitos(cnpj));
         }

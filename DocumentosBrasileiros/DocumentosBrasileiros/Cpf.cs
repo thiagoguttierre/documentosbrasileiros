@@ -6,14 +6,12 @@ namespace DocumentosBrasileiros
     {
         private readonly int[] _pesos = { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };
 
-        protected override bool Validar()
+        protected internal override bool Validar()
         {
             string cpf = Numero;
 
             //verifica o tamanho da string 
             if (cpf.Length < 11) return false;
-
-            if (cpf.AllCharsAreEqual()) return false;
 
             return cpf.EndsWith(ObterDigitos(cpf));
         }

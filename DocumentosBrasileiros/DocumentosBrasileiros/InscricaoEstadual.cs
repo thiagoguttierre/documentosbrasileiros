@@ -27,7 +27,7 @@ namespace DocumentosBrasileiros
 
         public UfEnum? Uf { get; set; }
 
-        protected override bool Validar()
+        protected internal override bool Validar()
         {
             if (Uf == null)
             {

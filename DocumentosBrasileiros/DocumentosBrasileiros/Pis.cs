@@ -12,14 +12,12 @@ namespace DocumentosBrasileiros
             Numero = numero;
         }
 
-        protected override bool Validar()
+        protected internal override bool Validar()
         {
             string pis = Numero;
 
             //Verifica o tamanho da string
             if (pis.Length != 11) return false;
-
-            if (pis.AllCharsAreEqual()) return false;
 
             return pis.EndsWith(ObterDigitos(pis));
         }
