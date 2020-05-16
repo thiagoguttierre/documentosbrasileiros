@@ -51,7 +51,7 @@ namespace DocumentosBrasileiros.IE
             int digito = 11 - soma % 11;
 
             if (digito == 10) digito = 0;
-            else if (digito == 1) digito = d;
+            else if (digito == 11) digito = d;
 
 
             return digito;
