@@ -6,3 +6,11 @@ C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros\Document
 C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros\DocumentosBrasileiros\bin\Debug\netstandard2.0\DocumentosBrasileiros.pdb
 C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros\DocumentosBrasileiros\obj\Debug\netstandard2.0\DocumentosBrasileiros.dll
 C:\Projects\thiagoguttierre\documentosbrasileiros\DocumentosBrasileiros\DocumentosBrasileiros\obj\Debug\netstandard2.0\DocumentosBrasileiros.pdb
+C:\Users\DELL\Source\Repos\Arthurvcs\documentosbrasileiros\DocumentosBrasileiros\DocumentosBrasileiros\obj\Debug\netstandard2.0\DocumentosBrasileiros.pdb
+C:\Users\DELL\Source\Repos\Arthurvcs\documentosbrasileiros\DocumentosBrasileiros\DocumentosBrasileiros\obj\Debug\netstandard2.0\DocumentosBrasileiros.AssemblyInfoInputs.cache
+C:\Users\DELL\Source\Repos\Arthurvcs\documentosbrasileiros\DocumentosBrasileiros\DocumentosBrasileiros\obj\Debug\netstandard2.0\DocumentosBrasileiros.AssemblyInfo.cs
+C:\Users\DELL\Source\Repos\Arthurvcs\documentosbrasileiros\DocumentosBrasileiros\DocumentosBrasileiros\obj\Debug\netstandard2.0\DocumentosBrasileiros.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Source\Repos\Arthurvcs\documentosbrasileiros\DocumentosBrasileiros\DocumentosBrasileiros\obj\Debug\netstandard2.0\DocumentosBrasileiros.dll
+C:\Users\DELL\Source\Repos\Arthurvcs\documentosbrasileiros\DocumentosBrasileiros\DocumentosBrasileiros\bin\Debug\netstandard2.0\DocumentosBrasileiros.deps.json
+C:\Users\DELL\Source\Repos\Arthurvcs\documentosbrasileiros\DocumentosBrasileiros\DocumentosBrasileiros\bin\Debug\netstandard2.0\DocumentosBrasileiros.dll
+C:\Users\DELL\Source\Repos\Arthurvcs\documentosbrasileiros\DocumentosBrasileiros\DocumentosBrasileiros\bin\Debug\netstandard2.0\DocumentosBrasileiros.pdb

@@ -2032,7 +2032,7 @@
       },
       "DocumentosBrasileiros/2.0.2": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
+        "framework": ".NETStandard,Version=v2.1",
         "compile": {
           "bin/placeholder/DocumentosBrasileiros.dll": {}
         },
@@ -6891,19 +6891,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\thiag\\.nuget\\packages\\": {}
+    "C:\\Users\\DELL\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projects\\thiagoguttierre\\documentosbrasileiros\\DocumentosBrasileiros\\DocumentosBrasileiros.Test\\DocumentosBrasileiros.Test.csproj",
+      "projectUniqueName": "C:\\Users\\DELL\\Source\\Repos\\Arthurvcs\\documentosbrasileiros\\DocumentosBrasileiros\\DocumentosBrasileiros.Test\\DocumentosBrasileiros.Test.csproj",
       "projectName": "DocumentosBrasileiros.Test",
-      "projectPath": "C:\\Projects\\thiagoguttierre\\documentosbrasileiros\\DocumentosBrasileiros\\DocumentosBrasileiros.Test\\DocumentosBrasileiros.Test.csproj",
-      "packagesPath": "C:\\Users\\thiag\\.nuget\\packages\\",
-      "outputPath": "C:\\Projects\\thiagoguttierre\\documentosbrasileiros\\DocumentosBrasileiros\\DocumentosBrasileiros.Test\\obj\\",
+      "projectPath": "C:\\Users\\DELL\\Source\\Repos\\Arthurvcs\\documentosbrasileiros\\DocumentosBrasileiros\\DocumentosBrasileiros.Test\\DocumentosBrasileiros.Test.csproj",
+      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\DELL\\Source\\Repos\\Arthurvcs\\documentosbrasileiros\\DocumentosBrasileiros\\DocumentosBrasileiros.Test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\thiag\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6911,15 +6911,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Users\\thiag\\AppData\\Roaming\\SAK\\Nuget": {},
         "https://api.nuget.org/v3/index.json": {},
-        "https://xpinvestimentos.pkgs.visualstudio.com/_packaging/PackagesXP/nuget/v3/index.json": {}
+        "https://pkgs.dev.azure.com/supermix/_packaging/Supermix/nuget/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Projects\\thiagoguttierre\\documentosbrasileiros\\DocumentosBrasileiros\\DocumentosBrasileiros\\DocumentosBrasileiros.csproj": {
-              "projectPath": "C:\\Projects\\thiagoguttierre\\documentosbrasileiros\\DocumentosBrasileiros\\DocumentosBrasileiros\\DocumentosBrasileiros.csproj"
+            "C:\\Users\\DELL\\Source\\Repos\\Arthurvcs\\documentosbrasileiros\\DocumentosBrasileiros\\DocumentosBrasileiros\\DocumentosBrasileiros.csproj": {
+              "projectPath": "C:\\Users\\DELL\\Source\\Repos\\Arthurvcs\\documentosbrasileiros\\DocumentosBrasileiros\\DocumentosBrasileiros\\DocumentosBrasileiros.csproj"
             }
           }
         }
@@ -6932,6 +6932,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "MSTest.TestAdapter": {
             "target": "Package",
@@ -6965,7 +6966,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   }

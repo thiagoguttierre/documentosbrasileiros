@@ -1,0 +1,9 @@
+C:\Users\DELL\Source\Repos\Arthurvcs\documentosbrasileiros\DocumentosBrasileiros\DocumentosBrasileiros\bin\Debug\netstandard2.1\DocumentosBrasileiros.deps.json
+C:\Users\DELL\Source\Repos\Arthurvcs\documentosbrasileiros\DocumentosBrasileiros\DocumentosBrasileiros\bin\Debug\netstandard2.1\DocumentosBrasileiros.dll
+C:\Users\DELL\Source\Repos\Arthurvcs\documentosbrasileiros\DocumentosBrasileiros\DocumentosBrasileiros\bin\Debug\netstandard2.1\DocumentosBrasileiros.pdb
+C:\Users\DELL\Source\Repos\Arthurvcs\documentosbrasileiros\DocumentosBrasileiros\DocumentosBrasileiros\obj\Debug\netstandard2.1\DocumentosBrasileiros.csprojAssemblyReference.cache
+C:\Users\DELL\Source\Repos\Arthurvcs\documentosbrasileiros\DocumentosBrasileiros\DocumentosBrasileiros\obj\Debug\netstandard2.1\DocumentosBrasileiros.AssemblyInfoInputs.cache
+C:\Users\DELL\Source\Repos\Arthurvcs\documentosbrasileiros\DocumentosBrasileiros\DocumentosBrasileiros\obj\Debug\netstandard2.1\DocumentosBrasileiros.AssemblyInfo.cs
+C:\Users\DELL\Source\Repos\Arthurvcs\documentosbrasileiros\DocumentosBrasileiros\DocumentosBrasileiros\obj\Debug\netstandard2.1\DocumentosBrasileiros.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Source\Repos\Arthurvcs\documentosbrasileiros\DocumentosBrasileiros\DocumentosBrasileiros\obj\Debug\netstandard2.1\DocumentosBrasileiros.dll
+C:\Users\DELL\Source\Repos\Arthurvcs\documentosbrasileiros\DocumentosBrasileiros\DocumentosBrasileiros\obj\Debug\netstandard2.1\DocumentosBrasileiros.pdb
