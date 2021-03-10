@@ -1,0 +1,24 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.1/",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.1": {},
+    ".NETStandard,Version=v2.1/": {
+      "DocumentosBrasileiros/2.0.2": {
+        "runtime": {
+          "DocumentosBrasileiros.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DocumentosBrasileiros/2.0.2": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
