@@ -12,7 +12,7 @@ namespace DocumentosBrasileiros.IE
         public bool Validar(string inscricaoEstadual)
         {
             if (inscricaoEstadual.Length != 13) return false;
-            if (!inscricaoEstadual.StartsWith("07")) return false;
+            if (!inscricaoEstadual.StartsWith("07") && !inscricaoEstadual.StartsWith("08")) return false;
 
             string inscricaoSemDigito = inscricaoEstadual.Substring(0, 11);
             string digito1 = ObterDigito("0" + inscricaoSemDigito).ToString();

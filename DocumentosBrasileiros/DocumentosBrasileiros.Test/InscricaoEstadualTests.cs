@@ -67,5 +67,13 @@ namespace DocumentosBrasileiros.Test
 
             Assert.IsTrue(!errors.Any(), string.Join(". ", errors));
         }
+
+        [TestMethod]
+        public void ValidacaoIe_Df()
+        {
+            var doc = new InscricaoEstadual("0812267500151", Enums.UfEnum.DF);
+            Assert.IsTrue(doc.DocumentoValido());
+        }
+
     }
 }
