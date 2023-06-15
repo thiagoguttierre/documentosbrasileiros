@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net6</TargetFramework>
     <Description>Validação e criação de números de documentos brasileiros, como CNH, CPF, PIS, CNPJ, Renavam e Inscrição Estadual</Description>
     <Authors>Thiago Guttierre</Authors>
     <Company>Thiago Guttierre</Company>

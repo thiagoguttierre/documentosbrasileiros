@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29905.134
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33801.468
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentosBrasileiros", "DocumentosBrasileiros\DocumentosBrasileiros.csproj", "{DE25A782-4043-4E71-AE85-6B3AAC440438}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentosBrasileiros", "DocumentosBrasileiros\DocumentosBrasileiros.csproj", "{DE25A782-4043-4E71-AE85-6B3AAC440438}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentosBrasileiros.Test", "DocumentosBrasileiros.Test\DocumentosBrasileiros.Test.csproj", "{6DB78AB7-8E24-48BA-9CA5-A803214E3E68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentosBrasileiros.Test", "DocumentosBrasileiros.Test\DocumentosBrasileiros.Test.csproj", "{6DB78AB7-8E24-48BA-9CA5-A803214E3E68}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
