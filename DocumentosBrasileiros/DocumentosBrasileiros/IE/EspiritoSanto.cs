@@ -1,6 +1,6 @@
-﻿using System;
-using DocumentosBrasileiros.Enums;
+﻿using DocumentosBrasileiros.Enums;
 using DocumentosBrasileiros.Interfaces;
+using System;
 
 namespace DocumentosBrasileiros.IE
 {

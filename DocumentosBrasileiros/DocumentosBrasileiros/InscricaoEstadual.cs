@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using DocumentosBrasileiros.Enums;
+﻿using DocumentosBrasileiros.Enums;
 using DocumentosBrasileiros.IE;
 using DocumentosBrasileiros.Interfaces;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace DocumentosBrasileiros
 {

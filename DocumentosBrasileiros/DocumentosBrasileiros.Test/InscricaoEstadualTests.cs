@@ -1,8 +1,8 @@
+using DocumentosBrasileiros.Enums;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using DocumentosBrasileiros.Enums;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DocumentosBrasileiros.Test
 {

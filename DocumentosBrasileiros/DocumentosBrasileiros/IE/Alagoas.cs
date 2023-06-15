@@ -1,8 +1,8 @@
-﻿using System;
-using System.Linq;
-using DocumentosBrasileiros.Enums;
+﻿using DocumentosBrasileiros.Enums;
 using DocumentosBrasileiros.Helpers;
 using DocumentosBrasileiros.Interfaces;
+using System;
+using System.Linq;
 
 namespace DocumentosBrasileiros.IE
 {
@@ -13,7 +13,7 @@ namespace DocumentosBrasileiros.IE
     /// NNNNN - Número da empresa
     /// D - Dígito verificador
     /// </summary>
-    public class Alagoas: IInscricaoEstadual
+    public class Alagoas : IInscricaoEstadual
     {
         public UfEnum UfEnum => UfEnum.AL;
 

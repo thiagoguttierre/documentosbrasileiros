@@ -8,7 +8,7 @@ namespace DocumentosBrasileiros.Test
         [TestMethod]
         public void PisIsValid()
         {
-           var doc = new Pis("657.59730.12-6");
+            var doc = new Pis("657.59730.12-6");
             Assert.IsTrue(doc.DocumentoValido());
         }
 

@@ -8,7 +8,7 @@ namespace DocumentosBrasileiros.Test
         [TestMethod]
         public void CnhIsValid()
         {
-           var doc = new Cnh("13975859080");
+            var doc = new Cnh("13975859080");
             Assert.IsTrue(doc.DocumentoValido());
         }
 

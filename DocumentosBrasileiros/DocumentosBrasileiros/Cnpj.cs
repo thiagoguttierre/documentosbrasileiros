@@ -5,13 +5,13 @@ namespace DocumentosBrasileiros
     public class Cnpj : Documento
     {
         private readonly int[] _pesos = { 6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
-        
+
         public Cnpj() { }
         public Cnpj(string numero)
         {
             Numero = numero;
         }
-        
+
         protected override bool Validar()
         {
             string cnpj = Numero;

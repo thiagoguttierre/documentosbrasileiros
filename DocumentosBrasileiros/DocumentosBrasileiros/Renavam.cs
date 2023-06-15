@@ -1,5 +1,5 @@
-﻿using System.Linq;
-using DocumentosBrasileiros.Helpers;
+﻿using DocumentosBrasileiros.Helpers;
+using System.Linq;
 
 namespace DocumentosBrasileiros
 {
@@ -37,7 +37,7 @@ namespace DocumentosBrasileiros
         {
             string renavam = "".RandomNumbers(10);
             Numero = renavam + ObterDigito(renavam);
-            
+
             return Numero;
         }
 
