@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
 
 namespace DocumentosBrasileiros.Helpers
@@ -10,8 +8,8 @@ namespace DocumentosBrasileiros.Helpers
     {
         public static string RemoveSpecialChars(this string value)
         {
-            return string.IsNullOrEmpty(value) 
-                ? string.Empty 
+            return string.IsNullOrEmpty(value)
+                ? string.Empty
                 : new Regex("[;\\\\/:*?\"<>|=&--'.¨$#%-+,!@()_]").Replace(value, "").Replace(" ", "");
         }
 

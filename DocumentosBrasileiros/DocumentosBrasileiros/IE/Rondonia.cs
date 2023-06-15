@@ -1,11 +1,11 @@
-﻿using System;
-using DocumentosBrasileiros.Enums;
+﻿using DocumentosBrasileiros.Enums;
 using DocumentosBrasileiros.Helpers;
 using DocumentosBrasileiros.Interfaces;
+using System;
 
 namespace DocumentosBrasileiros.IE
 {
-    public class Rondonia :IInscricaoEstadual
+    public class Rondonia : IInscricaoEstadual
     {
         public UfEnum UfEnum => UfEnum.RO;
 
@@ -27,7 +27,7 @@ namespace DocumentosBrasileiros.IE
             }
 
             return inscricaoEstadual.EndsWith(digito);
-               
+
         }
 
         public string GerarFake()

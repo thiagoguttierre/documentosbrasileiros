@@ -8,7 +8,7 @@ namespace DocumentosBrasileiros.Test
         [TestMethod]
         public void CnpjIsValid()
         {
-           var doc = new Cnpj("06.990.590/0001-23");
+            var doc = new Cnpj("06.990.590/0001-23");
             Assert.IsTrue(doc.DocumentoValido());
         }
 

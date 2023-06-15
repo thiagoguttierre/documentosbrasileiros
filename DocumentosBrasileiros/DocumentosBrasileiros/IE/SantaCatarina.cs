@@ -1,8 +1,8 @@
-﻿using System;
-using System.Linq;
-using DocumentosBrasileiros.Enums;
+﻿using DocumentosBrasileiros.Enums;
 using DocumentosBrasileiros.Helpers;
 using DocumentosBrasileiros.Interfaces;
+using System;
+using System.Linq;
 
 namespace DocumentosBrasileiros.IE
 {

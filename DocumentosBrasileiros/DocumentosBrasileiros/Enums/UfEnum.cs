@@ -1,6 +1,6 @@
 ﻿namespace DocumentosBrasileiros.Enums
 {
-    public enum  UfEnum
+    public enum UfEnum
     {
         RO = 11,
         AC = 12,
